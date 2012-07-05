@@ -1,1 +1,1 @@
-jiji
+Openlayers example
