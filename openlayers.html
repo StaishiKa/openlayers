@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml>"
+<head>
+    <title>Fair</title>
+    <meta http-equiv='imagetoolbar' content='no'/>
+    <style type="text/css"> 
+		v\:* {behavior:url(#default#VML);}
+		html, body { overflow: hidden; padding: 0; height: 100%; width: 100%; font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; }
+		body { margin: 10px; background: #fff; }
+		h1 { margin: 0; padding: 6px; border:0; font-size: 20pt; }
+		#header { height: 43px; padding: 0; background-color: #eee; border: 1px solid #888; }
+		#subheader { height: 12px; text-align: right; font-size: 10px; color: #555;}
+		#map { height: 95%; border: 1px solid #888; }
+    </style>
+	<script src="lib/OpenLayers.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var map;
+		var mapBounds = new OpenLayers.Bounds( 0.0, -4096.0, 4096.0, 0.0);// границы(лево, низ, право, верх)
+		var mapMinZoom = 0;
+		var mapMaxZoom = 4;
+
+		// avoid pink tiles
+		OpenLayers.Util.onImageLoadErrorColor = "transparent"; //The color tiles with load errors will turn.
+		OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3; // How many times should we try to reload an image before giving up? 
+		
+		OpenLayers.Util.extend(
+			OpenLayers.Feature.Vector.style.default,
+			{
+				label: "${title}",
+				fontSize: '15',
+				fontFamily: 'arial',
+				pointRadius: 3
+			}
+		);
+
+		OpenLayers.Util.extend(
+			OpenLayers.Feature.Vector.style.select,
+			{
+				pointRadius: 3,
+				label: "${title}",
+				fontSize: '15',
+				fontFamily: 'arial',
+				
+			}
+		);
+			
+		
+		function onselect(evt) {
+		alert(evt.feature.attributes.title);
+		   //window.open(evt.feature.attributes.url);
+		}
+		
+		function init(){
+	        var options = {
+	            controls: [],
+		        maxExtent: new OpenLayers.Bounds(  0.0, -4096.0, 4096.0, 0.0 ),
+		        maxResolution: 16.000000,
+		        numZoomLevels: 5
+				//eventListeners: { "zoomend": mapEvent}
+		    };
+	        map = new OpenLayers.Map('map', options);
+	
+		    var layer = new OpenLayers.Layer.TMS( "TMS Layer","",
+		        {  url: '', serviceVersion: '.', layername: '.', alpha: true,
+					type: 'png', getURL: overlay_getTileURL 
+				});
+		    map.addLayer(layer);
+			
+		
+	        map.addControl(new OpenLayers.Control.PanZoomBar());
+	        map.addControl(new OpenLayers.Control.MousePosition());
+	        map.addControl(new OpenLayers.Control.MouseDefaults());
+	        map.addControl(new OpenLayers.Control.KeyboardDefaults());
+			
+			var geojson = new OpenLayers.Format.GeoJSON(),
+			geojsonData =  {
+				"type": "FeatureCollection",
+																								
+				"features": [
+				{ "type": "Feature", "id": -6, "properties": { "id": 1, "title": "OSGeo", "url": "http://www.osgeo.org/" }, 
+					"geometry": { "type": "Point", "coordinates": [ 1807.2216216216216, -1928.9945945945947 ] } }
+				,
+				{ "type": "Feature", "id": -7, "properties": { "id": 2, "title": "GIS.SE", "url": "http://gis.stackexchange.com/" }, 
+					"geometry": { "type": "Point", "coordinates": [ 1978.8108108108104, -1923.4594594594591 ] } }
+				,
+				{ "type": "Feature", "id": -8, "properties": { "id": 3, "title": "GIS-LAB", "url": "http://gis-lab.info" }, 
+					"geometry": { "type": "Point", "coordinates": [ 1790.6162162162159, -2083.9783783783782 ] } }]
+				};
+			
+			vector = new OpenLayers.Layer.Vector();
+			map.addLayer(vector);
+			vector.addFeatures(geojson.read(geojsonData));
+
+			select = new OpenLayers.Control.SelectFeature(vector, {autoActivate: true});
+			map.addControl(select);
+			
+			vector.events.register("featureselected", null, onselect);
+			select.activate();
+			
+			map.zoomToExtent( mapBounds );	//увеличить по границам
+	    }
+			
+		function mapEvent(event) {
+			//if(event.type == "zoomend") {
+			if(event.object.zoom == 1) {
+				//alert(1);
+				}
+		}
+
+	    function overlay_getTileURL(bounds) {
+	        var res = this.map.getResolution();
+	        var x = Math.round((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));
+	        var y = Math.round((bounds.bottom - this.maxExtent.bottom) / (res * this.tileSize.h));
+	        var z = this.map.getZoom();
+			if (x >= 0 && y >= 0) {
+		        return this.url + z + "/" + x + "/" + y + "." + this.type;				
+			} else {
+	            return "http://www.maptiler.org/img/none.png";
+			}
+		}
+			
+		   /*function getWindowHeight() {
+		        if (self.innerHeight) return self.innerHeight;
+		        if (document.documentElement && document.documentElement.clientHeight)
+		            return document.documentElement.clientHeight;
+		        if (document.body) return document.body.clientHeight;
+			        return 0;
+		    }
+
+		    function getWindowWidth() {
+			    if (self.innerWidth) return self.innerWidth;
+			    if (document.documentElement && document.documentElement.clientWidth)
+			        return document.documentElement.clientWidth;
+			    if (document.body) return document.body.clientWidth;
+			        return 0;
+		    }
+
+		    function resize() {  
+			    var map = document.getElementById("map");  
+			    var header = document.getElementById("header");  
+			    var subheader = document.getElementById("subheader");  
+			    map.style.height = (getWindowHeight()-80) + "px";
+			    map.style.width = (getWindowWidth()-20) + "px";
+			    header.style.width = (getWindowWidth()-20) + "px";
+			    subheader.style.width = (getWindowWidth()-20) + "px";
+				if (map.updateSize) { map.updateSize(); };
+		    } */
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			///////
+			
+		
+
+    /*function init(){
+        map = new OpenLayers.Map({
+            div: "map",
+            projection: "EPSG:900913",
+            layers: [
+                new OpenLayers.Layer.OSM(null, null, {isBaseLayer: true, opacity: 0.7})
+            ],
+            zoom: 5,
+            center: [4000000, 9000000]
+        });
+
+        vector = new OpenLayers.Layer.Vector();
+        map.addLayer(vector);
+        vector.addFeatures(geojson.read(geojsonData));
+
+        select = new OpenLayers.Control.SelectFeature(vector, {autoActivate: true});
+        map.addControl(select);
+        vector.events.register("featureselected", null, onselect);
+
+    } */
+			
+			
+			///////
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		    //onresize=function(){ resize(); };
+
+		    </script>
+		  </head>
+		  <body onload="init()">
+			<div id="header"><h1>Fair</h1></div>
+			<div id="subheader">Generated by <a href="http://www.maptiler.org/">MapTiler</a>/<a href="http://www.klokan.cz/projects/gdal2tiles/">GDAL2Tiles</a>, Copyright &copy; 2008 <a href="http://www.klokan.cz/">Klokan Petr Pridal</a>,  <a href="http://www.gdal.org/">GDAL</a> &amp; <a href="http://www.osgeo.org/">OSGeo</a> <a href="http://code.google.com/soc/">GSoC</a>
+			<!-- PLEASE, LET THIS NOTE ABOUT AUTHOR AND PROJECT SOMEWHERE ON YOUR WEBSITE, OR AT LEAST IN THE COMMENT IN HTML. THANK YOU -->
+			</div>
+		    <div id="map"></div>
+		    <!--<script type="text/javascript" >resize()</script> -->
+		  </body>
+		</html>

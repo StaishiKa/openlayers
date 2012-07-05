@@ -1,0 +1,8088 @@
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>FishEye: history newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css</title>
+        
+
+<link rel="SHORTCUT ICON" href="/static/lloojw/images/favicon.ico">
+
+
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/concat.style.b784b754dfcad796a2f3f9df1faf3403.cache.css">
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/jquery/plugin/concat.style.bdcacfb5a3696da3a841a099531ef483.cache.css">
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/style-ie.css">
+<![endif]-->
+
+<script type="text/javascript" src="/static/lloojw/concat.aui.17d2a99624af5fc474ee4cf8d3c24caa.cache.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/jquery/theme/concat.aui.66772a9535c165201741278510c0dfdc.cache.css">
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/aui/css/atlassian/concat.aui.9b7beedcb28b5343d63f6e7242ad49e3.cache.css">
+
+                                        <!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/aui/css/atlassian/concat.aui-ie.33f0092e3a747cd95684af1bd0f97425.cache.css">
+
+      <![endif]--><link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/dropdown-base.css">
+
+
+
+
+
+<!-- Start WebResourceManager included resources -->
+
+<!-- End WebResourceManager included resources -->
+
+<script type="text/javascript" src="/static/lloojw/concat.jquery.92fa0c53e28dcf3246ed326e09e1f1db.cache.js"></script>
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+<script type="text/javascript">jQuery.noConflict();</script>
+
+<!--[if IE]>
+
+<script type="text/javascript">/**
+ * Disable features that are not performant in IE (must be conditionally included).
+ */
+(function ($) {
+
+    var version = $.browser.version;
+    var majorVersion = parseInt(version.substr(0, 1), 10);
+
+    if (majorVersion < 7) {
+        alert([
+            'Warning: Internet Explorer ', version, ' is not a supported browser and ',
+            'your experience will be severely degraded.\n',
+            'Please consider upgrading to a newer browser.'
+        ].join(''));
+    }
+
+    // Disable scroll trackers.
+    if (majorVersion <= 7) {
+        window.CRU = window.CRU || {};
+        CRU.disableScrollTracking = true;
+    }
+
+})(jQuery);
+</script>
+<![endif]-->
+
+<script type="text/javascript" src="/static/lloojw/concat.fecru.dac295a6dc6347f143864ca9e4988e28.cache.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/static/lloojw/2static/style/cru/concat.fecru.521c38827d2dce323301cb5f630d4941.cache.css">
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+<!--[if IE]>
+<script type="text/javascript" src="/static/lloojw/2static/script/fecru/ie.js"></script>
+<![endif]-->
+
+
+<script type="text/javascript">
+    window.FECRU = window.FECRU || {};
+    FECRU.pageContext = "";
+    FECRU.staticDirectory = "static/lloojw";
+    FECRU.userTimeZoneOffset = "0";
+    FECRU.beginProcessingTimestamp = "1341299953771";
+    FECRU.isAnon = true;
+</script>
+
+
+
+        
+    </head>
+    <body  class="brancher ">
+        <div id="masthead">
+            
+
+
+    
+
+
+
+
+
+    
+        
+            
+
+    
+        
+        
+        
+    
+
+            
+                
+
+
+
+
+
+
+
+
+            
+        
+        
+    
+
+
+
+    <div id="header">
+        <div id="header-top">
+            
+
+
+
+
+
+
+    
+
+
+            
+                
+            
+                
+                
+                
+                
+                    <a class="fecru" href="/" id="product-name">FishEye and Crucible</a>
+                
+            
+            
+                
+            
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+    <script type="text/javascript">
+        window.FECRU = window.FECRU || {};
+
+    
+    
+        
+        FECRU.quickSearchUrl = "/json/qsearch/newscoop";
+    
+
+    </script>
+    
+
+
+
+
+
+    
+    
+        <form method="get" action="/qsearch/newscoop" id="quick-search-form">
+    
+
+
+    
+        <img id="busyQnav" alt="busy" name="busyQnav"
+                     src="/static/lloojw/images/spinner.gif">
+    
+    <label for="quick-search-input">Quick Search:</label>
+    <input class="qsInput" id="quick-search-input"
+           name="q"
+           type="text"
+           size=""
+           value="Search"
+    >
+    <div id="quick-search-dropdown-holder" class="aui-dd-parent"></div>
+    <label for="quick-search-input" class="end">Search</label>
+<script type="text/javascript">
+    AJS.$("#quick-search-form .qsInput").attr("autocomplete","off");
+
+    AJS.toInit(function() {
+        FECRU.UI.setupQuicksearch();
+        AJS.$("#quick-search-form").delegate("a.quick-search-redo", "click", function(e) {
+            AJS.$(e.target).trigger("menuItemSelected");
+            e.preventDefault();
+            return false;
+        });
+        AJS.$("#quick-search-form").delegate("a.quick-search-redo", "menuItemSelected", function(e) {
+            FECRU.UI.refreshSearch("/json/fe/globalQuicksearch-ajax.do");
+            return false;
+        });
+    });
+</script>
+
+
+
+
+
+
+    
+    
+        </form>
+    
+
+
+
+
+                
+            <ul id="header-details">
+                
+                
+                    <li id="header-details-user" class="detail-drop aui-dd-parent">
+                        
+                            
+                                
+                                    
+                                
+                                <input type="hidden" id="origUrl" value="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">
+                                <a id="login-link" class="lnk"
+                                   href="/login?origUrl=/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">
+                                    Log In
+                                </a>
+                            
+                        
+                        
+                    </li>
+                    
+                
+            </ul>
+        </div>
+        <div id="header-bottom">
+
+            
+            
+
+            
+            
+            
+
+            <div id="menu">
+                <ul id="main-nav" class="menu-bar">
+                    <li class=" tab-simple">
+                        
+                            
+                            
+                                <a href="/" class=" lnk">Dashboard</a>
+                            
+                        
+                    </li>
+                    
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li  class="aui-dd-parent aui-dd-nav source-dd-parent current">
+
+<a
+            href="/browse"
+class="current lnk">Source</a>
+
+<span class="drop-wrap">
+<a class="aui-dropdown-trigger aui-dd-link drop" title="Recently Viewed Repositories"><span>Recently Viewed Repositories</span></a>
+</span>
+<div class="dropdown-holder">
+<div class="aui-dropdown hidden aui-dropdown-left source-dropdown ">
+
+                                    <h5>Current Repository</h5>
+                                    <input type="hidden" name="currentRepositoryName" value="newscoop" />
+                                    <ol>
+                                        <li>
+                                            
+
+    
+        
+        <a href="/changelog/newscoop" class="" title="newscoop">
+            newscoop
+        </a>
+    
+    
+
+
+
+                                        </li>
+                                    </ol>
+                                
+                                <ol class="dropdown-last">
+                                    <li>
+                                        <a href="/browse">All Repositories</a>
+                                    </li>
+                                </ol>
+</div>
+</div>
+</li>
+
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li  class="aui-dd-parent aui-dd-nav projects-dd-parent">
+
+<a
+            href="/projects"
+class=" lnk">Projects</a>
+
+<span class="drop-wrap">
+<a class="aui-dropdown-trigger aui-dd-link drop" title="Recently Viewed Projects"><span>Recently Viewed Projects</span></a>
+</span>
+<div class="dropdown-holder">
+<div class="aui-dropdown hidden aui-dropdown-left projects-dropdown ">
+
+                                <ol class="dropdown-last">
+                                    <li>
+                                        <a href="/projects">All Projects</a>
+                                    </li>
+                                </ol>
+</div>
+</div>
+</li>
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li  class="aui-dd-parent aui-dd-nav people-dd-parent">
+
+<a
+            href="/users"
+class=" lnk">People</a>
+
+<span class="drop-wrap">
+<a class="aui-dropdown-trigger aui-dd-link drop" title="Recently Viewed Users"><span>Recently Viewed Users</span></a>
+</span>
+<div class="dropdown-holder">
+<div class="aui-dropdown hidden aui-dropdown-left people-dropdown ">
+<ol class="dropdown-last">
+                                    <li>
+                                        <a href="/users">All Users</a>
+                                    </li>
+                                </ol>
+</div>
+</div>
+</li>
+
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li  class="aui-dd-parent aui-dd-nav reviews-dd-parent">
+
+<a
+            href="/cru/reviews"
+class=" lnk">Reviews</a>
+
+<span class="drop-wrap">
+<a class="aui-dropdown-trigger aui-dd-link drop" title="Recently Viewed Reviews"><span>Recently Viewed Reviews</span></a>
+</span>
+<div class="dropdown-holder">
+<div class="aui-dropdown hidden aui-dropdown-left reviews-dropdown ">
+
+                                
+                                <ol class="dropdown-last">
+                                    <li>
+                                        <a href="/cru/reviews">All Reviews</a>
+                                    </li>
+                                </ol>
+</div>
+</div>
+</li>
+
+
+                    
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+        </div>
+        <div id="atlas" >
+            
+            
+            
+            
+            <div id="content" class="content-explorer browsepage">
+                <div id="content-fixed" class="content-fixed">
+                    
+<div id="header-file" class="header filetype-css">
+    <span 
+            class="avatar">&nbsp;</span>
+
+    <h3 class="breadcrumbs"><span class="crumbs"><a href="/browse/newscoop" title="">newscoop</a><span>/</span><a href="/browse/newscoop/newscoop" title="newscoop">newscoop</a><span>/</span><a href="/browse/newscoop/newscoop/js" title="newscoop/js">js</a><span>/</span><a href="/browse/newscoop/newscoop/js/geocoding" title="newscoop/js/geocoding">geocoding</a><span>/</span><a href="/browse/newscoop/newscoop/js/geocoding/openlayers" title="newscoop/js/geocoding/openlayers">openlayers</a><span>/</span><a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme" title="newscoop/js/geocoding/openlayers/theme">theme</a><span>/</span><a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default" title="newscoop/js/geocoding/openlayers/theme/default">default</a></span></h3>
+
+
+    
+        
+        
+            <div class="copy">
+                <h1><span>style.css</span>
+</h1>
+            </div>
+        
+    
+</div>
+
+                </div>
+
+                <table cellspacing="0" id="columns">
+                    <tbody>
+                        <tr>
+                            <td id="column-tearout">
+                                
+                                    
+                                    
+                                        
+                                    
+                                
+                                
+                                    
+                                
+                                
+                                    
+                                
+                                <div class="tearout-tabs tearout-icons">
+                                    <ul>
+                                        
+                                            
+                                            <li class="tearout-tree tearout-active">
+                                                <a>Tree</a>
+                                                <input type="hidden" value="t"/>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </ul>
+                                </div><!-- /.tearout-tabs -->
+                            </td>
+                            <td id="column-sidebar">
+                                <div id="content-sidebar" style="width: 290px;">
+                                    <div id="content-sidebar-head">
+                                    
+                                        
+
+    
+    
+
+    
+    
+    
+        
+        
+        
+    
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+
+    
+    
+    
+    
+    <div id="branch-selector" class="edit">
+        <!-- Modifications to this section need to consider the assumptions in fisheye-ui.js:reloadFilePaneAndHeader -->
+        <div class="toolbar has-aui-toolbar">
+            <div class="aui-toolbar">
+                <ul id="branch-selector-group" class="toolbar-group">
+                    <li class="toolbar-item branch-selector active">
+                        <a id="select-branch-all" class="toolbar-trigger"
+                            href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?wbbr=&wbtag=&wbjump=jump"
+                            title="View all branches in this repository"
+                                >All</a>
+                    </li>
+                    
+                        <li class="toolbar-item branch-selector ">
+                            <a id="select-branch-default" class="toolbar-trigger"
+                                    href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?wbbr=master&wbtag=&wbjump=jump"
+                                    title="View branch: 'master'"
+                                    >master</a>
+                        </li>
+                    
+                    
+                </ul>
+
+                <ul class="toolbar-group edit-group">
+                    <li class="toolbar-item">
+                        <div>
+                            <form method="post" action="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css" id="branch-constraint-form">
+                                <input name="wbjump" value="jump" type="hidden">
+                                <input name="wbbr" value="" type="hidden" class="branchConstraint">
+                                <input name="wbtag" value="" type="hidden" class="tagConstraint">
+                                
+                                
+                                <input name="@+lsbr" id="lastSelected" value="" type="hidden"> 
+
+                                <div class="constraint-set">
+                                    
+                                    
+
+                                    
+<div class="fecru-autocomplete-wrapper">
+    <input id="branchConstraint-input" type="text" name="branchTagAutocomplete"
+           title="Select branch or tag"
+           class="text " value="">
+    <span class="fecru-autocomplete-dropdown-icon">&nbsp;</span>
+</div>
+<script type="text/javascript">
+    var eventType = "ready";
+    AJS.$(document).bind(eventType, function() {
+        var opts = {
+            disableCache: true,
+            matchContains: true,
+            width: 250,
+            
+            extraParams: { "command": "branches,tags" },
+            result: function ($input, data) {
+                                                FECRU.UI.processSelectedBranch(data);
+                                            },
+            
+            url: "/changelog-ajax/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css",
+            id: "branchConstraint-input",
+            inputId: "branchConstraint-input"
+        };
+        AJS.$("#branchConstraint-input").fecruAutocomplete(opts);
+
+        
+        AJS.$("#branchConstraint-input").placeholder("Select branch or tag");
+        
+    });
+</script>
+
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    AJS.$(document).ready(function() {
+        FE.branchSelectorRepName = "newscoop";
+    });
+
+    (function() {
+        
+    })();
+</script>
+
+                                    
+                                    </div>
+
+                                    <div id="content-resizable">
+                                        <div id="content-navigation" class="navigation-resizable">
+                                            <div id="content-navigation-panel" class="panel panel-directory">
+                                                
+                                                    <div id="panel-tree" class="panel-tearout">
+                                                        
+
+
+
+
+
+
+
+
+<div id="dir-tree-options" class="dir-tree-options">
+    <div class="aui-dd-parent" >
+        <a class="aui-dd-link">Options</a>
+        <div class="aui-dropdown aui-dropdown-right hidden"><ul class="control"><li class="taskbar-empty toolBarEmpty"><a class="hideEmptyDirectoriesY" >Hide&nbsp;empty&nbsp;directories</a><a class="hideEmptyDirectoriesN" style="display:none;">Show&nbsp;empty&nbsp;directories</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    AJS.$(document).ready(function() {
+        var fns = {};
+        fns["Y"] = function() {
+            var node = AJS.$("#navigation-tree,#browse-table");
+        
+            node.addClass("empty-hide");
+        
+        
+        };
+        fns["N"] = function() {
+            var node = AJS.$("#navigation-tree,#browse-table");
+        
+            node.removeClass("empty-hide");
+        
+              
+        };
+
+        FECRU.PREFS.setupBinaryPrefLinks("hideEmptyDirectories", "hed", false, fns, "Y", "N", true,  false, "#dir-tree-options");
+    });
+</script>
+<li class="toolbar-hide-deleted"><a class="toolbar-hide hideDeletedFilesY" >Hide&nbsp;deleted&nbsp;files</a><a class="toolbar-hide hideDeletedFilesN" style="display:none">Show&nbsp;deleted&nbsp;files</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    AJS.$(document).ready(function() {
+        var fns = {};
+        fns["Y"] = function() {
+            var node = AJS.$("#navigation-tree,#browse-table,#fileResults");
+        
+            node.addClass("deleted-hide");
+        
+        
+        };
+        fns["N"] = function() {
+            var node = AJS.$("#navigation-tree,#browse-table,#fileResults");
+        
+            node.removeClass("deleted-hide");
+        
+              
+        };
+
+        FECRU.PREFS.setupBinaryPrefLinks("hideDeletedFiles", "hdf", false, fns, "Y", "N", true,  false, "#content-wrapper >.toolbar,#dir-tree-options");
+    });
+</script>
+</ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Tree build time: 36 Node count: 280 -->
+<div id="navigation-tree" class="hidden-hide"><ul class="tree" id="tree-root">
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli279065631">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/auto-tests" class="pathLink" >auto-tests/<input type="hidden" name="anchor" value="auto-testsZ002fselenium"/></a><a href="/browse/newscoop/auto-tests/selenium" class="pathLink" >selenium/<input type="hidden" name="anchor" value="auto-testsZ002fselenium"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2071175817">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/Campsite%20Test%20Suit.html" class="fileLink" >Campsite Test Suit.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fCampsiteZ0020TestZ0020Suit.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2041444074">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/DeleteProcess.html" class="fileLink" >DeleteProcess.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fDeleteProcess.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2134251919">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/README" class="fileLink" >README<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fREADME"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2035915351">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20article%20type.html" class="fileLink" >add new article type.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020articleZ0020type.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1854281369">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20blog.html" class="fileLink" >add new blog.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020blog.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli661962808">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20interview.html" class="fileLink" >add new interview.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020interview.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli733821084">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20poll.html" class="fileLink" >add new poll.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020poll.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli108668001">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20staff%20member.html" class="fileLink" >add new staff member.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020staffZ0020member.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli112955603">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20subscriber.html" class="fileLink" >add new subscriber.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020subscriber.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1746790602">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20topic.html" class="fileLink" >add new topic.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020topic.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1076970486">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/add%20new%20user%20type.html" class="fileLink" >add new user type.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002faddZ0020newZ0020userZ0020type.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli277795103">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/attach%20imagine.html" class="fileLink" >attach imagine.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fattachZ0020imagine.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli967843511">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/backup%20process.html" class="fileLink" >backup process.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fbackupZ0020process.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli694709720">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/create%20article.html" class="fileLink" >create article.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fcreateZ0020article.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1460042459">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/create%20issue.html" class="fileLink" >create issue.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fcreateZ0020issue.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1640648049">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/create%20new%20directory%20for%20new%20templates.html" class="fileLink" >create new directory for new templates.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fcreateZ0020newZ0020directoryZ0020forZ0020newZ0020templates.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1261790030">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/create%20publication.html" class="fileLink" >create publication.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fcreateZ0020publication.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli350076313">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/create%20section.html" class="fileLink" >create section.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fcreateZ0020section.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1209105377">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/delete%20article%20type.html" class="fileLink" >delete article type.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fdeleteZ0020articleZ0020type.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1673920985">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/delete%20article.html" class="fileLink" >delete article.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fdeleteZ0020article.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2119029482">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/delete%20issue.html" class="fileLink" >delete issue.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fdeleteZ0020issue.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli552061923">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/delete%20publication.html" class="fileLink" >delete publication.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fdeleteZ0020publication.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1576260278">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/delete%20section.html" class="fileLink" >delete section.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002fdeleteZ0020section.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli538015601">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/login%20test.html" class="fileLink" >login test.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002floginZ0020test.html"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1324327660">
+
+<span  class="file filetype-html">
+
+
+
+
+<a href="/browse/newscoop/auto-tests/selenium/restore.html" class="fileLink" >restore.html<input type="hidden" name="anchor" value="auto-testsZ002fseleniumZ002frestore.html"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli139382456">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/campsite" class="pathLink" >campsite/<input type="hidden" name="anchor" value="campsite"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1283844030">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf" class="pathLink" >.install_conf/<input type="hidden" name="anchor" value="campsiteZ002f.install_conf"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli815839516">
+
+<span  class="file filetype-conf">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.inst.conf" class="fileLink" >.inst.conf<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.inst.conf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli298916435">
+
+<span  class="file filetype-dep">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.inst.dep" class="fileLink" >.inst.dep<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.inst.dep"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli701631179">
+
+<span  class="file filetype-modules">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.inst.modules" class="fileLink" >.inst.modules<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.inst.modules"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1499631593">
+
+<span  class="file filetype-conf">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.modules.conf" class="fileLink" >.modules.conf<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.modules.conf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1748244472">
+
+<span  class="file filetype-dep">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.modules.dep" class="fileLink" >.modules.dep<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.modules.dep"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1499611260">
+
+<span  class="file filetype-desc">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/.modules.desc" class="fileLink" >.modules.desc<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002f.modules.desc"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli828599760">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/backup_instance" class="fileLink" >backup_instance<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fbackup_instance"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli898933690">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/backup_instance.php" class="fileLink" >backup_instance.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fbackup_instance.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1993498374">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/check4_functions" class="fileLink" >check4_functions<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcheck4_functions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli227368920">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/cli_script_lib.php" class="fileLink" >cli_script_lib.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcli_script_lib.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1349450750">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/conf_functions" class="fileLink" >conf_functions<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fconf_functions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli2044939147">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/cp_path" class="fileLink" >cp_path<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcp_path"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli526108205">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/create_backup.php" class="fileLink" >create_backup.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcreate_backup.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1539610570">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/create_instance" class="fileLink" >create_instance<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcreate_instance"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli735246656">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/create_instance.php" class="fileLink" >create_instance.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcreate_instance.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli892384536">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/cron_functions" class="fileLink" >cron_functions<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fcron_functions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli826017687">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/export_conf.php" class="fileLink" >export_conf.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fexport_conf.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1703021386">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/export_module_params.php" class="fileLink" >export_module_params.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fexport_module_params.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1916469827">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/global_functions" class="fileLink" >global_functions<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fglobal_functions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1541461616">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/install_conf.php" class="fileLink" >install_conf.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002finstall_conf.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli316803509">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/install_functions" class="fileLink" >install_functions<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002finstall_functions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli980354745">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/is_executable.php" class="fileLink" >is_executable.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fis_executable.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli368283668">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/module_conf_file.php" class="fileLink" >module_conf_file.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fmodule_conf_file.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1180247948">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/parser_conf.php" class="fileLink" >parser_conf.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fparser_conf.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli307039160">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/php_mysql_exists.php" class="fileLink" >php_mysql_exists.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fphp_mysql_exists.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1371127095">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/read_app_conf" class="fileLink" >read_app_conf<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fread_app_conf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1732306781">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/remove_all_instances" class="fileLink" >remove_all_instances<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fremove_all_instances"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2037123502">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/remove_instance" class="fileLink" >remove_instance<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fremove_instance"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1958751288">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/remove_instance.php" class="fileLink" >remove_instance.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fremove_instance.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli396371228">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/restore_instance" class="fileLink" >restore_instance<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002frestore_instance"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1235455378">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/restore_instance.php" class="fileLink" >restore_instance.php<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002frestore_instance.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli841839174">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/update_instances" class="fileLink" >update_instances<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fupdate_instances"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1602998425">
+
+<span  class="file filetype-conf">
+
+
+
+
+<a href="/browse/newscoop/campsite/.install_conf/vhost-template.conf" class="fileLink" >vhost-template.conf<input type="hidden" name="anchor" value="campsiteZ002f.install_confZ002fvhost-template.conf"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1815908501">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/dev-tools" class="pathLink" >dev-tools/<input type="hidden" name="anchor" value="campsiteZ002fdev-tools"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1448023042">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/documentation" class="pathLink" >documentation/<input type="hidden" name="anchor" value="campsiteZ002fdocumentation"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1543953658">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/implementation" class="pathLink" >implementation/<input type="hidden" name="anchor" value="campsiteZ002fimplementation"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1895480464">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/install_conf" class="pathLink" >install_conf/<input type="hidden" name="anchor" value="campsiteZ002finstall_conf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli938594837">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/promotion" class="pathLink" >promotion/<input type="hidden" name="anchor" value="campsiteZ002fpromotion"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli139268308">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/src" class="pathLink" >src/<input type="hidden" name="anchor" value="campsiteZ002fsrc"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1465005076">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/supplemental" class="pathLink" >supplemental/<input type="hidden" name="anchor" value="campsiteZ002fsupplemental"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1842345089">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/templates" class="pathLink" >templates/<input type="hidden" name="anchor" value="campsiteZ002ftemplates"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli135814040">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/campsite/trac" class="pathLink" >trac/<input type="hidden" name="anchor" value="campsiteZ002ftrac"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli801110537">
+
+<span  class="file filetype-inst_components">
+
+
+
+
+<a href="/browse/newscoop/campsite/.inst_components" class="fileLink" >.inst_components<input type="hidden" name="anchor" value="campsiteZ002f.inst_components"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1836466046">
+
+<span  class="file filetype-inst_components-package">
+
+
+
+
+<a href="/browse/newscoop/campsite/.inst_components-package" class="fileLink" >.inst_components-package<input type="hidden" name="anchor" value="campsiteZ002f.inst_components-package"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1666984969">
+
+<span  class="file filetype-package_type">
+
+
+
+
+<a href="/browse/newscoop/campsite/.package_type" class="fileLink" >.package_type<input type="hidden" name="anchor" value="campsiteZ002f.package_type"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli67908240">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/AUTHORS" class="fileLink" >AUTHORS<input type="hidden" name="anchor" value="campsiteZ002fAUTHORS"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1532130677">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/COPYING" class="fileLink" >COPYING<input type="hidden" name="anchor" value="campsiteZ002fCOPYING"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1607233986">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/CREDITS" class="fileLink" >CREDITS<input type="hidden" name="anchor" value="campsiteZ002fCREDITS"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli975140196">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/ChangeLog" class="fileLink" >ChangeLog<input type="hidden" name="anchor" value="campsiteZ002fChangeLog"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1758797117">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/INSTALL" class="fileLink" >INSTALL<input type="hidden" name="anchor" value="campsiteZ002fINSTALL"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli791227051">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/INSTALL_FREEBSD" class="fileLink" >INSTALL_FREEBSD<input type="hidden" name="anchor" value="campsiteZ002fINSTALL_FREEBSD"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli33691182">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/Makefile" class="fileLink" >Makefile<input type="hidden" name="anchor" value="campsiteZ002fMakefile"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli2021032202">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/README" class="fileLink" >README<input type="hidden" name="anchor" value="campsiteZ002fREADME"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli347428676">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/UPGRADE" class="fileLink" >UPGRADE<input type="hidden" name="anchor" value="campsiteZ002fUPGRADE"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli943811538">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/configure" class="fileLink" >configure<input type="hidden" name="anchor" value="campsiteZ002fconfigure"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1818187491">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/install" class="fileLink" >install<input type="hidden" name="anchor" value="campsiteZ002finstall"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli761011408">
+
+<span  class="file filetype-sh">
+
+
+
+
+<a href="/browse/newscoop/campsite/install.sh" class="fileLink" >install.sh<input type="hidden" name="anchor" value="campsiteZ002finstall.sh"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1923123457">
+
+<span  class="file filetype-gif filetype-binary">
+
+
+
+
+<a href="/browse/newscoop/campsite/thisisacampsite.gif" class="fileLink" >thisisacampsite.gif<input type="hidden" name="anchor" value="campsiteZ002fthisisacampsite.gif"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1980029959">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/translation" class="fileLink" >translation<input type="hidden" name="anchor" value="campsiteZ002ftranslation"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli764978646">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/campsite/uninstall" class="fileLink" >uninstall<input type="hidden" name="anchor" value="campsiteZ002funinstall"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli915985160">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/db-update" class="pathLink" >db-update/<input type="hidden" name="anchor" value="db-update"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1150787621">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/db-update/geolocations" class="pathLink" >geolocations/<input type="hidden" name="anchor" value="db-updateZ002fgeolocations"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli930832271">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/db-update/geonames" class="pathLink" >geonames/<input type="hidden" name="anchor" value="db-updateZ002fgeonames"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1344759506">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/debian-package" class="pathLink" >debian-package/<input type="hidden" name="anchor" value="debian-package"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1840366659">
+
+<span  class="file filetype-Debian">
+
+
+
+
+<a href="/browse/newscoop/debian-package/README.Debian" class="fileLink" >README.Debian<input type="hidden" name="anchor" value="debian-packageZ002fREADME.Debian"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli785081939">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/campsite-default.ex" class="fileLink" >campsite-default.ex<input type="hidden" name="anchor" value="debian-packageZ002fcampsite-default.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli881625373">
+
+<span  class="file filetype-EX">
+
+
+
+
+<a href="/browse/newscoop/debian-package/campsite.doc-base.EX" class="fileLink" >campsite.doc-base.EX<input type="hidden" name="anchor" value="debian-packageZ002fcampsite.doc-base.EX"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli110512834">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/changelog" class="fileLink" >changelog<input type="hidden" name="anchor" value="debian-packageZ002fchangelog"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1595395248">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/compat" class="fileLink" >compat<input type="hidden" name="anchor" value="debian-packageZ002fcompat"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli398310364">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/conffiles.ex" class="fileLink" >conffiles.ex<input type="hidden" name="anchor" value="debian-packageZ002fconffiles.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli393216373">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/control" class="fileLink" >control<input type="hidden" name="anchor" value="debian-packageZ002fcontrol"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli178130165">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/copyright" class="fileLink" >copyright<input type="hidden" name="anchor" value="debian-packageZ002fcopyright"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli153833717">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/cron.d.ex" class="fileLink" >cron.d.ex<input type="hidden" name="anchor" value="debian-packageZ002fcron.d.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1341675852">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/dirs" class="fileLink" >dirs<input type="hidden" name="anchor" value="debian-packageZ002fdirs"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1341670551">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/docs" class="fileLink" >docs<input type="hidden" name="anchor" value="debian-packageZ002fdocs"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1970311005">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/manpage.1.ex" class="fileLink" >manpage.1.ex<input type="hidden" name="anchor" value="debian-packageZ002fmanpage.1.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1201728329">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/manpage.sgml.ex" class="fileLink" >manpage.sgml.ex<input type="hidden" name="anchor" value="debian-packageZ002fmanpage.sgml.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli886663613">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/manpage.xml.ex" class="fileLink" >manpage.xml.ex<input type="hidden" name="anchor" value="debian-packageZ002fmanpage.xml.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli394441520">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/menu.ex" class="fileLink" >menu.ex<input type="hidden" name="anchor" value="debian-packageZ002fmenu.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli516787735">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/postinst.ex" class="fileLink" >postinst.ex<input type="hidden" name="anchor" value="debian-packageZ002fpostinst.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli675488212">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/postrm.ex" class="fileLink" >postrm.ex<input type="hidden" name="anchor" value="debian-packageZ002fpostrm.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli116891270">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/preinst.ex" class="fileLink" >preinst.ex<input type="hidden" name="anchor" value="debian-packageZ002fpreinst.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1672794545">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/prerm.ex" class="fileLink" >prerm.ex<input type="hidden" name="anchor" value="debian-packageZ002fprerm.ex"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1235885531">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/debian-package/rules" class="fileLink" >rules<input type="hidden" name="anchor" value="debian-packageZ002frules"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli799660192">
+
+<span  class="file filetype-ex">
+
+
+
+
+<a href="/browse/newscoop/debian-package/watch.ex" class="fileLink" >watch.ex<input type="hidden" name="anchor" value="debian-packageZ002fwatch.ex"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1848618543">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/dependencies" class="pathLink" >dependencies/<input type="hidden" name="anchor" value="dependenciesZ002finclude"/></a><a href="/browse/newscoop/dependencies/include" class="pathLink" >include/<input type="hidden" name="anchor" value="dependenciesZ002finclude"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1587405498">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/documentation" class="pathLink" >documentation/<input type="hidden" name="anchor" value="documentation"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli839138678">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/documentation/specifications" class="pathLink" >specifications/<input type="hidden" name="anchor" value="documentationZ002fspecifications"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli294244248">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/documentation/README" class="fileLink" >README<input type="hidden" name="anchor" value="documentationZ002fREADME"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1230880582">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/modules" class="pathLink" >modules/<input type="hidden" name="anchor" value="modulesZ002fpoll"/></a><a href="/browse/newscoop/modules/poll" class="pathLink" >poll/<input type="hidden" name="anchor" value="modulesZ002fpoll"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395300512">
+
+<span  class="tree open">
+
+
+
+
+<a href="/browse/newscoop/newscoop" class="pathLink" >newscoop/<input type="hidden" name="anchor" value="newscoop"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree open">
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1395396938">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/adm" class="pathLink" >adm/<input type="hidden" name="anchor" value="newscoopZ002fadm"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli192449767">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/admin-files" class="pathLink" >admin-files/<input type="hidden" name="anchor" value="newscoopZ002fadmin-files"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli180103597">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/admin-style" class="pathLink" >admin-style/<input type="hidden" name="anchor" value="newscoopZ002fadmin-style"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1345413648">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/application" class="pathLink" >application/<input type="hidden" name="anchor" value="newscoopZ002fapplication"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1372574">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/backup" class="pathLink" >backup/<input type="hidden" name="anchor" value="newscoopZ002fbackup"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395398055">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/bin" class="pathLink" >bin/<input type="hidden" name="anchor" value="newscoopZ002fbin"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1489717282">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/cache" class="pathLink" >cache/<input type="hidden" name="anchor" value="newscoopZ002fcache"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2046046010">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/classes" class="pathLink" >classes/<input type="hidden" name="anchor" value="newscoopZ002fclasses"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1398360004">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/conf" class="pathLink" >conf/<input type="hidden" name="anchor" value="newscoopZ002fconf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1398389467">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/docs" class="pathLink" >docs/<input type="hidden" name="anchor" value="newscoopZ002fdocs"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli414120780">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/extensions" class="pathLink" >extensions/<input type="hidden" name="anchor" value="newscoopZ002fextensions"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1492734743">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/files" class="pathLink" >files/<input type="hidden" name="anchor" value="newscoopZ002ffiles"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1326548412">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/hybridauth" class="pathLink" >hybridauth/<input type="hidden" name="anchor" value="newscoopZ002fhybridauth"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli210049816">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/images" class="pathLink" >images/<input type="hidden" name="anchor" value="newscoopZ002fimages"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli957092536">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/include" class="pathLink" >include/<input type="hidden" name="anchor" value="newscoopZ002finclude"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli942096837">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/install" class="pathLink" >install/<input type="hidden" name="anchor" value="newscoopZ002finstall"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1584296461">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/javascript" class="pathLink" >javascript/<input type="hidden" name="anchor" value="newscoopZ002fjavascript"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395303913">
+
+<span  class="tree open">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js" class="pathLink" >js/<input type="hidden" name="anchor" value="newscoopZ002fjs"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree open">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395400714">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/app" class="pathLink" >app/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fapp"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1345410247">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/application" class="pathLink" >application/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fapplication"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1398304859">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/apps" class="pathLink" >apps/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fapps"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1491070251">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/domTT" class="pathLink" >domTT/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fdomTT"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1297232000">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/editarea" class="pathLink" >editarea/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002feditarea"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli361913733">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/fValidate" class="pathLink" >fValidate/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002ffValidate"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1674369160">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/flowplayer" class="pathLink" >flowplayer/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fflowplayer"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1785153564">
+
+<span  class="tree open">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding" class="pathLink" >geocoding/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocoding"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree open">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli61663867">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/geonames" class="pathLink" >geonames/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fgeonames"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli945902755">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/markers" class="pathLink" >markers/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fmarkers"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli738176016">
+
+<span  class="tree open">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers" class="pathLink" >openlayers/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayers"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree open">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli738079149">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/art" class="pathLink" >art/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fart"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli738071629">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/img" class="pathLink" >img/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fimg"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli916955130">
+
+<span  class="tree open">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme" class="pathLink" >theme/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefault"/></a><a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default" class="pathLink" >default/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefault"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree open">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli917059517">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/img" class="pathLink" >img/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefaultZ002fimg"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli939156499">
+
+<span  class="file filetype-css">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/framedCloud.css" class="fileLink" >framedCloud.css<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefaultZ002fframedCloud.css"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli619338552">
+
+<span  class="file filetype-css">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/google.css" class="fileLink" >google.css<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefaultZ002fgoogle.css"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli668243763">
+
+<span  class="file filetype-css">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/ie6-style.css" class="fileLink" >ie6-style.css<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefaultZ002fie6-style.css"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1573853120">
+
+<span id="selectedDirTreeNode" class="file filetype-css">
+
+<input type="hidden" name="selectedPath" value="newscoop/js/geocoding/openlayers/theme/default/style.css">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css" class="fileLink" id="selectedDirTreeLink">style.css<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fthemeZ002fdefaultZ002fstyle.css"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli77088066">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/OLlocals.js" class="fileLink" >OLlocals.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fOLlocals.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1774537189">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/OpenLayers.js" class="fileLink" >OpenLayers.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002fOpenLayers.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1380353229">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/openlayers/license.txt" class="fileLink" >license.txt<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fopenlayersZ002flicense.txt"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1618038982">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/styles" class="pathLink" >styles/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fstyles"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1648936149">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/country_cens.js" class="fileLink" >country_cens.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fcountry_cens.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1869501826">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/country_codes.js" class="fileLink" >country_codes.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fcountry_codes.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli214112650">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/location_chooser.js" class="fileLink" >location_chooser.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002flocation_chooser.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1535643584">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/map_filter.js" class="fileLink" >map_filter.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fmap_filter.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1269526511">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/map_popups.js" class="fileLink" >map_popups.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fmap_popups.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1127770154">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/map_preview.js" class="fileLink" >map_preview.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fmap_preview.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1123936272">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/geocoding/map_search.js" class="fileLink" >map_search.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fgeocodingZ002fmap_search.js"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli242970759">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/jquery" class="pathLink" >jquery/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fjquery"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli326504531">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/models" class="pathLink" >models/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fmodels"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli455912218">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/plupload" class="pathLink" >plupload/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fplupload"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli855489040">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/pwd_meter" class="pathLink" >pwd_meter/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fpwd_meter"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1669781198">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/scriptaculous" class="pathLink" >scriptaculous/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fscriptaculous"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1319994745">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/syntaxhighlighter" class="pathLink" >syntaxhighlighter/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fsyntaxhighlighter"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli587666302">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/tapmodo-Jcrop-5e58bc9" class="pathLink" >tapmodo-Jcrop-5e58bc9/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002ftapmodo-Jcrop-5e58bc9"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli82909304">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/tinymce" class="pathLink" >tinymce/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002ftinymce"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1507508311">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/views" class="pathLink" >views/<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fviews"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli426141233">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/admin.js" class="fileLink" >admin.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fadmin.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1477904427">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/backbone.js" class="fileLink" >backbone.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fbackbone.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli460944335">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/base64.js" class="fileLink" >base64.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fbase64.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli190533959">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/campsite-audiosearch.js" class="fileLink" >campsite-audiosearch.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fcampsite-audiosearch.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli332570680">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/campsite-checkbox.js" class="fileLink" >campsite-checkbox.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fcampsite-checkbox.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2008987240">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/campsite.js" class="fileLink" >campsite.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fcampsite.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli492862542">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/crypt.js" class="fileLink" >crypt.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fcrypt.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli580693162">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/json2.js" class="fileLink" >json2.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fjson2.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli614472394">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/models.js" class="fileLink" >models.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fmodels.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1659105166">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/omnibox.js" class="fileLink" >omnibox.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fomnibox.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1121502920">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/search.js" class="fileLink" >search.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fsearch.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli847434565">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/sha1.js" class="fileLink" >sha1.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fsha1.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli389655270">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/underscore.js" class="fileLink" >underscore.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002funderscore.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1225989244">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/urls.js" class="fileLink" >urls.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002furls.js"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1702951246">
+
+<span  class="file filetype-js">
+
+
+
+
+<a href="/browse/newscoop/newscoop/js/views.js" class="fileLink" >views.js<input type="hidden" name="anchor" value="newscoopZ002fjsZ002fviews.js"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1561509211">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/library" class="pathLink" >library/<input type="hidden" name="anchor" value="newscoopZ002flibrary"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395407844">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/log" class="pathLink" >log/<input type="hidden" name="anchor" value="newscoopZ002flog"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1395411346">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/pdf" class="pathLink" >pdf/<input type="hidden" name="anchor" value="newscoopZ002fpdf"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli919670848">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/plugins" class="pathLink" >plugins/<input type="hidden" name="anchor" value="newscoopZ002fplugins"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli417876745">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/public" class="pathLink" >public/<input type="hidden" name="anchor" value="newscoopZ002fpublic"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1056692545">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/rest-api" class="pathLink" >rest-api/<input type="hidden" name="anchor" value="newscoopZ002frest-api"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1603983629">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/rest-api-libraries" class="pathLink" >rest-api-libraries/<input type="hidden" name="anchor" value="newscoopZ002frest-api-libraries"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1838021342">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/rest-api-test" class="pathLink" >rest-api-test/<input type="hidden" name="anchor" value="newscoopZ002frest-api-test"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli973151832">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/scripts" class="pathLink" >scripts/<input type="hidden" name="anchor" value="newscoopZ002fscripts"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli238442937">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/template_engine" class="pathLink" >template_engine/<input type="hidden" name="anchor" value="newscoopZ002ftemplate_engine"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli917939239">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/templates" class="pathLink" >templates/<input type="hidden" name="anchor" value="newscoopZ002ftemplates"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli149643164">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/templates_cache" class="pathLink" >templates_cache/<input type="hidden" name="anchor" value="newscoopZ002ftemplates_cache"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1505552065">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/tests" class="pathLink" >tests/<input type="hidden" name="anchor" value="newscoopZ002ftests"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli520477802">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/themes" class="pathLink" >themes/<input type="hidden" name="anchor" value="newscoopZ002fthemes"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli578622456">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/videos" class="pathLink" >videos/<input type="hidden" name="anchor" value="newscoopZ002fvideos"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli1399035585">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/newscoop/zend" class="pathLink" >zend/<input type="hidden" name="anchor" value="newscoopZ002fzend"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli748672086">
+
+<span  class="file filetype-gitignore">
+
+
+
+
+<a href="/browse/newscoop/newscoop/.gitignore" class="fileLink" >.gitignore<input type="hidden" name="anchor" value="newscoopZ002f.gitignore"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1402630222">
+
+<span  class="file filetype-htaccess-default">
+
+
+
+
+<a href="/browse/newscoop/newscoop/.htaccess-default" class="fileLink" >.htaccess-default<input type="hidden" name="anchor" value="newscoopZ002f.htaccess-default"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1141693781">
+
+<span  class="file filetype-yml">
+
+
+
+
+<a href="/browse/newscoop/newscoop/.travis.yml" class="fileLink" >.travis.yml<input type="hidden" name="anchor" value="newscoopZ002f.travis.yml"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1814536264">
+
+<span  class="file filetype-xml">
+
+
+
+
+<a href="/browse/newscoop/newscoop/.zfproject.xml" class="fileLink" >.zfproject.xml<input type="hidden" name="anchor" value="newscoopZ002f.zfproject.xml"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1228153651">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/COPYING" class="fileLink" >COPYING<input type="hidden" name="anchor" value="newscoopZ002fCOPYING"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1088771633">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/COPYING.txt" class="fileLink" >COPYING.txt<input type="hidden" name="anchor" value="newscoopZ002fCOPYING.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1153050342">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/CREDITS" class="fileLink" >CREDITS<input type="hidden" name="anchor" value="newscoopZ002fCREDITS"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1032603748">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/CREDITS.txt" class="fileLink" >CREDITS.txt<input type="hidden" name="anchor" value="newscoopZ002fCREDITS.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli559542772">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/ChangeLog" class="fileLink" >ChangeLog<input type="hidden" name="anchor" value="newscoopZ002fChangeLog"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1555813238">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/ChangeLog.txt" class="fileLink" >ChangeLog.txt<input type="hidden" name="anchor" value="newscoopZ002fChangeLog.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli224114149">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/INSTALL" class="fileLink" >INSTALL<input type="hidden" name="anchor" value="newscoopZ002fINSTALL"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1396686877">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/INSTALL.txt" class="fileLink" >INSTALL.txt<input type="hidden" name="anchor" value="newscoopZ002fINSTALL.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli382001712">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/LICENSE_3RD_PARTY.txt" class="fileLink" >LICENSE_3RD_PARTY.txt<input type="hidden" name="anchor" value="newscoopZ002fLICENSE_3RD_PARTY.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli486349234">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/README" class="fileLink" >README<input type="hidden" name="anchor" value="newscoopZ002fREADME"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2109672144">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/README.txt" class="fileLink" >README.txt<input type="hidden" name="anchor" value="newscoopZ002fREADME.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli1882111644">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/UPGRADE" class="fileLink" >UPGRADE<input type="hidden" name="anchor" value="newscoopZ002fUPGRADE"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1703545886">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/UPGRADE.txt" class="fileLink" >UPGRADE.txt<input type="hidden" name="anchor" value="newscoopZ002fUPGRADE.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1416034041">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/admin.php" class="fileLink" >admin.php<input type="hidden" name="anchor" value="newscoopZ002fadmin.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli146935930">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/application.php" class="fileLink" >application.php<input type="hidden" name="anchor" value="newscoopZ002fapplication.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1926316749">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/attachment.php" class="fileLink" >attachment.php<input type="hidden" name="anchor" value="newscoopZ002fattachment.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli496157907">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/db_connect.php" class="fileLink" >db_connect.php<input type="hidden" name="anchor" value="newscoopZ002fdb_connect.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1637593179">
+
+<span  class="file filetype-ico filetype-binary">
+
+
+
+
+<a href="/browse/newscoop/newscoop/favicon.ico" class="fileLink" >favicon.ico<input type="hidden" name="anchor" value="newscoopZ002ffavicon.ico"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli907366012">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/get_img.php" class="fileLink" >get_img.php<input type="hidden" name="anchor" value="newscoopZ002fget_img.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli706699792">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/newscoop/htaccess" class="fileLink" >htaccess<input type="hidden" name="anchor" value="newscoopZ002fhtaccess"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli586654460">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/index.php" class="fileLink" >index.php<input type="hidden" name="anchor" value="newscoopZ002findex.php"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli437298453">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/robots.txt" class="fileLink" >robots.txt<input type="hidden" name="anchor" value="newscoopZ002frobots.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-deleted" id="treeli247394228">
+
+<span  class="file filetype-txt">
+
+
+
+
+<a href="/browse/newscoop/newscoop/test.txt" class="fileLink" >test.txt<input type="hidden" name="anchor" value="newscoopZ002ftest.txt"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli450404538">
+
+<span  class="file filetype-php">
+
+
+
+
+<a href="/browse/newscoop/newscoop/upgrade.php" class="fileLink" >upgrade.php<input type="hidden" name="anchor" value="newscoopZ002fupgrade.php"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1802065795">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/packaging" class="pathLink" >packaging/<input type="hidden" name="anchor" value="packaging"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli466312760">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/packaging/debian" class="pathLink" >debian/<input type="hidden" name="anchor" value="packagingZ002fdebian"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1802178930">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/packaging/rpm" class="pathLink" >rpm/<input type="hidden" name="anchor" value="packagingZ002frpm"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1802179943">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/packaging/src" class="pathLink" >src/<input type="hidden" name="anchor" value="packagingZ002fsrc"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli863165787">
+
+<span  class="file filetype-sh">
+
+
+
+
+<a href="/browse/newscoop/packaging/gen-debian-package.sh" class="fileLink" >gen-debian-package.sh<input type="hidden" name="anchor" value="packagingZ002fgen-debian-package.sh"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli334209196">
+
+<span  class="file filetype-sh">
+
+
+
+
+<a href="/browse/newscoop/packaging/gen-rpm.sh" class="fileLink" >gen-rpm.sh<input type="hidden" name="anchor" value="packagingZ002fgen-rpm.sh"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli475629664">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/plugins" class="pathLink" >plugins/<input type="hidden" name="anchor" value="plugins"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli472602814">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/blog" class="pathLink" >blog/<input type="hidden" name="anchor" value="pluginsZ002fblog"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1811389807">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/debate" class="pathLink" >debate/<input type="hidden" name="anchor" value="pluginsZ002fdebate"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli27478305">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/interview" class="pathLink" >interview/<input type="hidden" name="anchor" value="pluginsZ002finterview"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli548326360">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/newsimport" class="pathLink" >newsimport/<input type="hidden" name="anchor" value="pluginsZ002fnewsimport"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli661979182">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/onlineinterview" class="pathLink" >onlineinterview/<input type="hidden" name="anchor" value="pluginsZ002fonlineinterview"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli78057544">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/pear_quickform" class="pathLink" >pear_quickform/<input type="hidden" name="anchor" value="pluginsZ002fpear_quickform"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli472182945">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/poll" class="pathLink" >poll/<input type="hidden" name="anchor" value="pluginsZ002fpoll"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli115743879">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/recaptcha" class="pathLink" >recaptcha/<input type="hidden" name="anchor" value="pluginsZ002frecaptcha"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli814621146">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/plugins/soundcloud" class="pathLink" >soundcloud/<input type="hidden" name="anchor" value="pluginsZ002fsoundcloud"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1235193558">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/sample-templates" class="pathLink" >sample-templates/<input type="hidden" name="anchor" value="sample-templates"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli393267410">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/sample-templates-01" class="pathLink" >sample-templates-01/<input type="hidden" name="anchor" value="sample-templatesZ002fsample-templates-01"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli393267409">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/sample-templates-02" class="pathLink" >sample-templates-02/<input type="hidden" name="anchor" value="sample-templatesZ002fsample-templates-02"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli393267408">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/sample-templates-03" class="pathLink" >sample-templates-03/<input type="hidden" name="anchor" value="sample-templatesZ002fsample-templates-03"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli393267407">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/sample-templates-04" class="pathLink" >sample-templates-04/<input type="hidden" name="anchor" value="sample-templatesZ002fsample-templates-04"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1940419992">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/the-custodian" class="pathLink" >the-custodian/<input type="hidden" name="anchor" value="sample-templatesZ002fthe-custodian"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli646456188">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/README" class="fileLink" >README<input type="hidden" name="anchor" value="sample-templatesZ002fREADME"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1681521730">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/sample-templates/build-packages" class="fileLink" >build-packages<input type="hidden" name="anchor" value="sample-templatesZ002fbuild-packages"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1926518126">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/scripts" class="pathLink" >scripts/<input type="hidden" name="anchor" value="scriptsZ002fci"/></a><a href="/browse/newscoop/scripts/ci" class="pathLink" >ci/<input type="hidden" name="anchor" value="scriptsZ002fci"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li browse-empty" id="treeli681814355">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/template_demos" class="pathLink" >template_demos/<input type="hidden" name="anchor" value="template_demosZ002fcampsite_3.0-sample-template-01-v1"/></a><a href="/browse/newscoop/template_demos/campsite_3.0-sample-template-01-v1" class="pathLink" >campsite_3.0-sample-template-01-v1/<input type="hidden" name="anchor" value="template_demosZ002fcampsite_3.0-sample-template-01-v1"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli110545371">
+
+<span  class="tree closed">
+
+
+
+
+<a href="/browse/newscoop/tools" class="pathLink" >tools/<input type="hidden" name="anchor" value="tools"/></a></span>
+
+
+
+
+
+
+
+
+
+<ul class="tree closed">
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli946313811">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/tools/cms_imports" class="pathLink" >cms_imports/<input type="hidden" name="anchor" value="toolsZ002fcms_imports"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli731112640">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/tools/data_import_newscoop" class="pathLink" >data_import_newscoop/<input type="hidden" name="anchor" value="toolsZ002fdata_import_newscoop"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1180783884">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/tools/events" class="pathLink" >events/<input type="hidden" name="anchor" value="toolsZ002fevents"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1957362802">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/tools/geonames" class="pathLink" >geonames/<input type="hidden" name="anchor" value="toolsZ002fgeonames"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli2027702477">
+
+<span  class="tree closed unfilled">
+
+
+
+
+<a href="/browse/newscoop/tools/schemas" class="pathLink" >schemas/<input type="hidden" name="anchor" value="toolsZ002fschemas"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli26197301">
+
+<span  class="file filetype-py">
+
+
+
+
+<a href="/browse/newscoop/tools/country_codes.py" class="fileLink" >country_codes.py<input type="hidden" name="anchor" value="toolsZ002fcountry_codes.py"/></a></span>
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1633606103">
+
+<span  class="file filetype-disable_upgrade">
+
+
+
+
+<a href="/browse/newscoop/.disable_upgrade" class="fileLink" >.disable_upgrade<input type="hidden" name="anchor" value="Z.disable_upgrade"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli253606731">
+
+<span  class="file filetype-yml">
+
+
+
+
+<a href="/browse/newscoop/.travis.yml" class="fileLink" >.travis.yml<input type="hidden" name="anchor" value="Z.travis.yml"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1881649746">
+
+<span  class="file filetype-">
+
+
+
+
+<a href="/browse/newscoop/README" class="fileLink" >README<input type="hidden" name="anchor" value="README"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1881086198">
+
+<span  class="file filetype-json">
+
+
+
+
+<a href="/browse/newscoop/composer.json" class="fileLink" >composer.json<input type="hidden" name="anchor" value="composer.json"/></a></span>
+
+
+
+
+
+
+</li>
+
+
+
+
+
+
+
+
+
+<li class="tree-li" id="treeli1881141561">
+
+<span  class="file filetype-lock">
+
+
+
+
+<a href="/browse/newscoop/composer.lock" class="fileLink" >composer.lock<input type="hidden" name="anchor" value="composer.lock"/></a></span>
+
+
+
+
+
+
+<script type="text/javascript">
+AJS.$(document).ready(function () {
+var data = {treeli2071175817:{path:"auto-tests/selenium/Campsite Test Suit.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2041444074:{path:"auto-tests/selenium/DeleteProcess.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2134251919:{path:"auto-tests/selenium/README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2035915351:{path:"auto-tests/selenium/add new article type.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1854281369:{path:"auto-tests/selenium/add new blog.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli661962808:{path:"auto-tests/selenium/add new interview.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli733821084:{path:"auto-tests/selenium/add new poll.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli108668001:{path:"auto-tests/selenium/add new staff member.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli112955603:{path:"auto-tests/selenium/add new subscriber.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1746790602:{path:"auto-tests/selenium/add new topic.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1076970486:{path:"auto-tests/selenium/add new user type.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli277795103:{path:"auto-tests/selenium/attach imagine.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli967843511:{path:"auto-tests/selenium/backup process.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli694709720:{path:"auto-tests/selenium/create article.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1460042459:{path:"auto-tests/selenium/create issue.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1640648049:{path:"auto-tests/selenium/create new directory for new templates.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1261790030:{path:"auto-tests/selenium/create publication.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli350076313:{path:"auto-tests/selenium/create section.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1209105377:{path:"auto-tests/selenium/delete article type.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1673920985:{path:"auto-tests/selenium/delete article.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2119029482:{path:"auto-tests/selenium/delete issue.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli552061923:{path:"auto-tests/selenium/delete publication.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1576260278:{path:"auto-tests/selenium/delete section.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli538015601:{path:"auto-tests/selenium/login test.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1324327660:{path:"auto-tests/selenium/restore.html",repname:"newscoop",baseurl:"/browse/newscoop"},treeli815839516:{path:"campsite/.install_conf/.inst.conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli298916435:{path:"campsite/.install_conf/.inst.dep",repname:"newscoop",baseurl:"/browse/newscoop"},treeli701631179:{path:"campsite/.install_conf/.inst.modules",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1499631593:{path:"campsite/.install_conf/.modules.conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1748244472:{path:"campsite/.install_conf/.modules.dep",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1499611260:{path:"campsite/.install_conf/.modules.desc",repname:"newscoop",baseurl:"/browse/newscoop"},treeli828599760:{path:"campsite/.install_conf/backup_instance",repname:"newscoop",baseurl:"/browse/newscoop"},treeli898933690:{path:"campsite/.install_conf/backup_instance.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1993498374:{path:"campsite/.install_conf/check4_functions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli227368920:{path:"campsite/.install_conf/cli_script_lib.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1349450750:{path:"campsite/.install_conf/conf_functions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2044939147:{path:"campsite/.install_conf/cp_path",repname:"newscoop",baseurl:"/browse/newscoop"},treeli526108205:{path:"campsite/.install_conf/create_backup.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1539610570:{path:"campsite/.install_conf/create_instance",repname:"newscoop",baseurl:"/browse/newscoop"},treeli735246656:{path:"campsite/.install_conf/create_instance.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli892384536:{path:"campsite/.install_conf/cron_functions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli826017687:{path:"campsite/.install_conf/export_conf.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1703021386:{path:"campsite/.install_conf/export_module_params.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1916469827:{path:"campsite/.install_conf/global_functions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1541461616:{path:"campsite/.install_conf/install_conf.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli316803509:{path:"campsite/.install_conf/install_functions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli980354745:{path:"campsite/.install_conf/is_executable.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli368283668:{path:"campsite/.install_conf/module_conf_file.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1180247948:{path:"campsite/.install_conf/parser_conf.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli307039160:{path:"campsite/.install_conf/php_mysql_exists.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1371127095:{path:"campsite/.install_conf/read_app_conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1732306781:{path:"campsite/.install_conf/remove_all_instances",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2037123502:{path:"campsite/.install_conf/remove_instance",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1958751288:{path:"campsite/.install_conf/remove_instance.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli396371228:{path:"campsite/.install_conf/restore_instance",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1235455378:{path:"campsite/.install_conf/restore_instance.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli841839174:{path:"campsite/.install_conf/update_instances",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1602998425:{path:"campsite/.install_conf/vhost-template.conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1815908501:{path:"campsite/dev-tools",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1448023042:{path:"campsite/documentation",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1543953658:{path:"campsite/implementation",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1895480464:{path:"campsite/install_conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli938594837:{path:"campsite/promotion",repname:"newscoop",baseurl:"/browse/newscoop"},treeli139268308:{path:"campsite/src",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1465005076:{path:"campsite/supplemental",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1842345089:{path:"campsite/templates",repname:"newscoop",baseurl:"/browse/newscoop"},treeli135814040:{path:"campsite/trac",repname:"newscoop",baseurl:"/browse/newscoop"},treeli801110537:{path:"campsite/.inst_components",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1836466046:{path:"campsite/.inst_components-package",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1666984969:{path:"campsite/.package_type",repname:"newscoop",baseurl:"/browse/newscoop"},treeli67908240:{path:"campsite/AUTHORS",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1532130677:{path:"campsite/COPYING",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1607233986:{path:"campsite/CREDITS",repname:"newscoop",baseurl:"/browse/newscoop"},treeli975140196:{path:"campsite/ChangeLog",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1758797117:{path:"campsite/INSTALL",repname:"newscoop",baseurl:"/browse/newscoop"},treeli791227051:{path:"campsite/INSTALL_FREEBSD",repname:"newscoop",baseurl:"/browse/newscoop"},treeli33691182:{path:"campsite/Makefile",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2021032202:{path:"campsite/README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli347428676:{path:"campsite/UPGRADE",repname:"newscoop",baseurl:"/browse/newscoop"},treeli943811538:{path:"campsite/configure",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1818187491:{path:"campsite/install",repname:"newscoop",baseurl:"/browse/newscoop"},treeli761011408:{path:"campsite/install.sh",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1923123457:{path:"campsite/thisisacampsite.gif",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1980029959:{path:"campsite/translation",repname:"newscoop",baseurl:"/browse/newscoop"},treeli764978646:{path:"campsite/uninstall",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1150787621:{path:"db-update/geolocations",repname:"newscoop",baseurl:"/browse/newscoop"},treeli930832271:{path:"db-update/geonames",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1840366659:{path:"debian-package/README.Debian",repname:"newscoop",baseurl:"/browse/newscoop"},treeli785081939:{path:"debian-package/campsite-default.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli881625373:{path:"debian-package/campsite.doc-base.EX",repname:"newscoop",baseurl:"/browse/newscoop"},treeli110512834:{path:"debian-package/changelog",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1595395248:{path:"debian-package/compat",repname:"newscoop",baseurl:"/browse/newscoop"},treeli398310364:{path:"debian-package/conffiles.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli393216373:{path:"debian-package/control",repname:"newscoop",baseurl:"/browse/newscoop"},treeli178130165:{path:"debian-package/copyright",repname:"newscoop",baseurl:"/browse/newscoop"},treeli153833717:{path:"debian-package/cron.d.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1341675852:{path:"debian-package/dirs",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1341670551:{path:"debian-package/docs",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1970311005:{path:"debian-package/manpage.1.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1201728329:{path:"debian-package/manpage.sgml.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli886663613:{path:"debian-package/manpage.xml.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli394441520:{path:"debian-package/menu.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli516787735:{path:"debian-package/postinst.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli675488212:{path:"debian-package/postrm.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli116891270:{path:"debian-package/preinst.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1672794545:{path:"debian-package/prerm.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1235885531:{path:"debian-package/rules",repname:"newscoop",baseurl:"/browse/newscoop"},treeli799660192:{path:"debian-package/watch.ex",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1848618543:{path:"dependencies",repname:"newscoop",baseurl:"/browse/newscoop"},treeli839138678:{path:"documentation/specifications",repname:"newscoop",baseurl:"/browse/newscoop"},treeli294244248:{path:"documentation/README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1230880582:{path:"modules",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1395396938:{path:"newscoop/adm",repname:"newscoop",baseurl:"/browse/newscoop"},treeli192449767:{path:"newscoop/admin-files",repname:"newscoop",baseurl:"/browse/newscoop"},treeli180103597:{path:"newscoop/admin-style",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1345413648:{path:"newscoop/application",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1372574:{path:"newscoop/backup",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1395398055:{path:"newscoop/bin",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1489717282:{path:"newscoop/cache",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2046046010:{path:"newscoop/classes",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1398360004:{path:"newscoop/conf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1398389467:{path:"newscoop/docs",repname:"newscoop",baseurl:"/browse/newscoop"},treeli414120780:{path:"newscoop/extensions",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1492734743:{path:"newscoop/files",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1326548412:{path:"newscoop/hybridauth",repname:"newscoop",baseurl:"/browse/newscoop"},treeli210049816:{path:"newscoop/images",repname:"newscoop",baseurl:"/browse/newscoop"},treeli957092536:{path:"newscoop/include",repname:"newscoop",baseurl:"/browse/newscoop"},treeli942096837:{path:"newscoop/install",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1584296461:{path:"newscoop/javascript",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1395400714:{path:"newscoop/js/app",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1345410247:{path:"newscoop/js/application",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1398304859:{path:"newscoop/js/apps",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1491070251:{path:"newscoop/js/domTT",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1297232000:{path:"newscoop/js/editarea",repname:"newscoop",baseurl:"/browse/newscoop"},treeli361913733:{path:"newscoop/js/fValidate",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1674369160:{path:"newscoop/js/flowplayer",repname:"newscoop",baseurl:"/browse/newscoop"},treeli61663867:{path:"newscoop/js/geocoding/geonames",repname:"newscoop",baseurl:"/browse/newscoop"},treeli945902755:{path:"newscoop/js/geocoding/markers",repname:"newscoop",baseurl:"/browse/newscoop"},treeli738079149:{path:"newscoop/js/geocoding/openlayers/art",repname:"newscoop",baseurl:"/browse/newscoop"},treeli738071629:{path:"newscoop/js/geocoding/openlayers/img",repname:"newscoop",baseurl:"/browse/newscoop"},treeli917059517:{path:"newscoop/js/geocoding/openlayers/theme/default/img",repname:"newscoop",baseurl:"/browse/newscoop"},treeli939156499:{path:"newscoop/js/geocoding/openlayers/theme/default/framedCloud.css",repname:"newscoop",baseurl:"/browse/newscoop"},treeli619338552:{path:"newscoop/js/geocoding/openlayers/theme/default/google.css",repname:"newscoop",baseurl:"/browse/newscoop"},treeli668243763:{path:"newscoop/js/geocoding/openlayers/theme/default/ie6-style.css",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1573853120:{path:"newscoop/js/geocoding/openlayers/theme/default/style.css",repname:"newscoop",baseurl:"/browse/newscoop"},treeli77088066:{path:"newscoop/js/geocoding/openlayers/OLlocals.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1774537189:{path:"newscoop/js/geocoding/openlayers/OpenLayers.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1380353229:{path:"newscoop/js/geocoding/openlayers/license.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1618038982:{path:"newscoop/js/geocoding/styles",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1648936149:{path:"newscoop/js/geocoding/country_cens.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1869501826:{path:"newscoop/js/geocoding/country_codes.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli214112650:{path:"newscoop/js/geocoding/location_chooser.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1535643584:{path:"newscoop/js/geocoding/map_filter.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1269526511:{path:"newscoop/js/geocoding/map_popups.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1127770154:{path:"newscoop/js/geocoding/map_preview.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1123936272:{path:"newscoop/js/geocoding/map_search.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli242970759:{path:"newscoop/js/jquery",repname:"newscoop",baseurl:"/browse/newscoop"},treeli326504531:{path:"newscoop/js/models",repname:"newscoop",baseurl:"/browse/newscoop"},treeli455912218:{path:"newscoop/js/plupload",repname:"newscoop",baseurl:"/browse/newscoop"},treeli855489040:{path:"newscoop/js/pwd_meter",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1669781198:{path:"newscoop/js/scriptaculous",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1319994745:{path:"newscoop/js/syntaxhighlighter",repname:"newscoop",baseurl:"/browse/newscoop"},treeli587666302:{path:"newscoop/js/tapmodo-Jcrop-5e58bc9",repname:"newscoop",baseurl:"/browse/newscoop"},treeli82909304:{path:"newscoop/js/tinymce",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1507508311:{path:"newscoop/js/views",repname:"newscoop",baseurl:"/browse/newscoop"},treeli426141233:{path:"newscoop/js/admin.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1477904427:{path:"newscoop/js/backbone.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli460944335:{path:"newscoop/js/base64.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli190533959:{path:"newscoop/js/campsite-audiosearch.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli332570680:{path:"newscoop/js/campsite-checkbox.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2008987240:{path:"newscoop/js/campsite.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli492862542:{path:"newscoop/js/crypt.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli580693162:{path:"newscoop/js/json2.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli614472394:{path:"newscoop/js/models.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1659105166:{path:"newscoop/js/omnibox.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1121502920:{path:"newscoop/js/search.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli847434565:{path:"newscoop/js/sha1.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli389655270:{path:"newscoop/js/underscore.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1225989244:{path:"newscoop/js/urls.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1702951246:{path:"newscoop/js/views.js",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1561509211:{path:"newscoop/library",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1395407844:{path:"newscoop/log",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1395411346:{path:"newscoop/pdf",repname:"newscoop",baseurl:"/browse/newscoop"},treeli919670848:{path:"newscoop/plugins",repname:"newscoop",baseurl:"/browse/newscoop"},treeli417876745:{path:"newscoop/public",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1056692545:{path:"newscoop/rest-api",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1603983629:{path:"newscoop/rest-api-libraries",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1838021342:{path:"newscoop/rest-api-test",repname:"newscoop",baseurl:"/browse/newscoop"},treeli973151832:{path:"newscoop/scripts",repname:"newscoop",baseurl:"/browse/newscoop"},treeli238442937:{path:"newscoop/template_engine",repname:"newscoop",baseurl:"/browse/newscoop"},treeli917939239:{path:"newscoop/templates",repname:"newscoop",baseurl:"/browse/newscoop"},treeli149643164:{path:"newscoop/templates_cache",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1505552065:{path:"newscoop/tests",repname:"newscoop",baseurl:"/browse/newscoop"},treeli520477802:{path:"newscoop/themes",repname:"newscoop",baseurl:"/browse/newscoop"},treeli578622456:{path:"newscoop/videos",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1399035585:{path:"newscoop/zend",repname:"newscoop",baseurl:"/browse/newscoop"},treeli748672086:{path:"newscoop/.gitignore",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1402630222:{path:"newscoop/.htaccess-default",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1141693781:{path:"newscoop/.travis.yml",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1814536264:{path:"newscoop/.zfproject.xml",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1228153651:{path:"newscoop/COPYING",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1088771633:{path:"newscoop/COPYING.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1153050342:{path:"newscoop/CREDITS",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1032603748:{path:"newscoop/CREDITS.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli559542772:{path:"newscoop/ChangeLog",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1555813238:{path:"newscoop/ChangeLog.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli224114149:{path:"newscoop/INSTALL",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1396686877:{path:"newscoop/INSTALL.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli382001712:{path:"newscoop/LICENSE_3RD_PARTY.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli486349234:{path:"newscoop/README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2109672144:{path:"newscoop/README.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1882111644:{path:"newscoop/UPGRADE",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1703545886:{path:"newscoop/UPGRADE.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1416034041:{path:"newscoop/admin.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli146935930:{path:"newscoop/application.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1926316749:{path:"newscoop/attachment.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli496157907:{path:"newscoop/db_connect.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1637593179:{path:"newscoop/favicon.ico",repname:"newscoop",baseurl:"/browse/newscoop"},treeli907366012:{path:"newscoop/get_img.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli706699792:{path:"newscoop/htaccess",repname:"newscoop",baseurl:"/browse/newscoop"},treeli586654460:{path:"newscoop/index.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli437298453:{path:"newscoop/robots.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli247394228:{path:"newscoop/test.txt",repname:"newscoop",baseurl:"/browse/newscoop"},treeli450404538:{path:"newscoop/upgrade.php",repname:"newscoop",baseurl:"/browse/newscoop"},treeli466312760:{path:"packaging/debian",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1802178930:{path:"packaging/rpm",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1802179943:{path:"packaging/src",repname:"newscoop",baseurl:"/browse/newscoop"},treeli863165787:{path:"packaging/gen-debian-package.sh",repname:"newscoop",baseurl:"/browse/newscoop"},treeli334209196:{path:"packaging/gen-rpm.sh",repname:"newscoop",baseurl:"/browse/newscoop"},treeli472602814:{path:"plugins/blog",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1811389807:{path:"plugins/debate",repname:"newscoop",baseurl:"/browse/newscoop"},treeli27478305:{path:"plugins/interview",repname:"newscoop",baseurl:"/browse/newscoop"},treeli548326360:{path:"plugins/newsimport",repname:"newscoop",baseurl:"/browse/newscoop"},treeli661979182:{path:"plugins/onlineinterview",repname:"newscoop",baseurl:"/browse/newscoop"},treeli78057544:{path:"plugins/pear_quickform",repname:"newscoop",baseurl:"/browse/newscoop"},treeli472182945:{path:"plugins/poll",repname:"newscoop",baseurl:"/browse/newscoop"},treeli115743879:{path:"plugins/recaptcha",repname:"newscoop",baseurl:"/browse/newscoop"},treeli814621146:{path:"plugins/soundcloud",repname:"newscoop",baseurl:"/browse/newscoop"},treeli393267410:{path:"sample-templates/sample-templates-01",repname:"newscoop",baseurl:"/browse/newscoop"},treeli393267409:{path:"sample-templates/sample-templates-02",repname:"newscoop",baseurl:"/browse/newscoop"},treeli393267408:{path:"sample-templates/sample-templates-03",repname:"newscoop",baseurl:"/browse/newscoop"},treeli393267407:{path:"sample-templates/sample-templates-04",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1940419992:{path:"sample-templates/the-custodian",repname:"newscoop",baseurl:"/browse/newscoop"},treeli646456188:{path:"sample-templates/README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1681521730:{path:"sample-templates/build-packages",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1926518126:{path:"scripts",repname:"newscoop",baseurl:"/browse/newscoop"},treeli681814355:{path:"template_demos",repname:"newscoop",baseurl:"/browse/newscoop"},treeli946313811:{path:"tools/cms_imports",repname:"newscoop",baseurl:"/browse/newscoop"},treeli731112640:{path:"tools/data_import_newscoop",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1180783884:{path:"tools/events",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1957362802:{path:"tools/geonames",repname:"newscoop",baseurl:"/browse/newscoop"},treeli2027702477:{path:"tools/schemas",repname:"newscoop",baseurl:"/browse/newscoop"},treeli26197301:{path:"tools/country_codes.py",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1633606103:{path:".disable_upgrade",repname:"newscoop",baseurl:"/browse/newscoop"},treeli253606731:{path:".travis.yml",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1881649746:{path:"README",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1881086198:{path:"composer.json",repname:"newscoop",baseurl:"/browse/newscoop"},treeli1881141561:{path:"composer.lock",repname:"newscoop",baseurl:"/browse/newscoop"}};
+var $tree = AJS.$("#tree-root");
+var currentData = $tree.data("extraAttrs");
+if (!currentData) {
+currentData = data;
+} else {
+for (var key in data) {
+currentData[key] = data[key];
+}
+}
+$tree.data("extraAttrs", currentData);
+});
+</script>
+</ul></div>
+<script type="text/javascript">
+    AJS.$(document).ready(function () {
+        //FE.fileHistoryPathLinkFn 
+        FECRU.BROWSE.initDirectoryTree(
+                FE.fileHistoryPathLinkFn,
+                null,
+                null,
+                null
+                );
+    });
+</script>
+
+                                                    </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div><!-- /content-resizable -->
+                                </div><!-- /content-sidebar -->
+
+
+                            </td>
+                            <td id="column-resize"><img src="/static/lloojw/2static/images/handle_v.gif" alt="" /></td>
+                            <td id="column-content">
+
+
+                                <div id="content-column">
+                                    <div id="content-column-panel" class="panel panel-content">
+                                        
+                                        <div class="content-view">
+                                            <ul>
+                                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+    
+        
+    
+    
+    
+    
+    
+
+
+<li><a class="" href="/changelog/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">Activity</a></li>
+<li><a class="active" href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">Revisions</a></li>
+<li><a class="" href="/users/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">Users</a></li>
+<li><a class="" href="/reports/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">Reports</a></li>
+
+    
+        <li><a class="" href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?hb=true" title="Latest revision on HEAD">Source</a></li>
+    
+    
+
+
+                                            </ul>
+                                        </div>
+                                        
+
+                                        <div id="content-wrapper">
+                                            
+                                                <div id="toolbar" class="toolbar has-aui-toolbar">
+                                                    
+<div class="aui-toolbar">
+
+    <ul class="toolbar-group">
+        <li class="toolbar-item disabled">
+            <form name="diffsubmitform" method="get" action="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">
+                <input name="r1" id="rev1" type="hidden"/>
+                <input name="r2" id="rev2" type="hidden"/>
+                <input id="diff-selected-button" value="Diff 2 selected" type="submit" disabled="disabled" class="toolbar-trigger"
+                        title="Select two revisions to view their diff"/> <!-- enabled when #r1 and #r2 are set -->
+            </form>
+        </li>
+        <li class="toolbar-item">
+            <form name="diffsubmitform" method="get" action="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css">
+                
+                
+                    <input name="r1" type="hidden" value="84ee9335e041ddf2c02781353588c5057bd15fee"/>
+                    <input name="r2" type="hidden" value="b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503"/>
+                
+                <input type="submit" value="Diff latest" class="toolbar-trigger"
+                       
+                        >
+            </form>
+        </li>
+    </ul>
+
+    <ul class="toolbar-group">
+        <li class="toolbar-item ">
+            <a title="Enable filter" class="toolbar-trigger constraint-toggle">
+                <span class="trigger-icon icon">&nbsp;</span>
+                <span class="trigger-text">Filter</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="toolbar-group">
+        
+        
+        
+            
+            
+                
+                
+            
+        
+        
+            <li class="toolbar-item ">
+                <a href="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?%40hvm=l" title="Related revisions are revisions of this file which are at the same path in tags or branches." class="toolbar-trigger">Include other branches</a>
+            </li>
+        
+    </ul>
+
+    <ul class="toolbar-group">
+        <li class="toolbar-item">
+            <a title="Show all details for each revision" class="toolbar-trigger" id="expand-all-revisions">Show all details</a>
+        </li>
+    </ul>
+
+    <ul class="toolbar-group">
+        <li class="toolbar-item">
+            
+
+    
+    <img class="ide-icon tb_right_mid"
+         id="ide-icon1396485584"
+         title="Open file newscoop/js/geocoding/openlayers/theme/default/style.css in IDE"
+         onclick="this.src=CRU.UTIL.createIdeSrc('http://localhost:51235/file?file=newscoop/js/geocoding/openlayers/theme/default/style.css', null);"
+         alt="Open in IDE"
+         src="http://localhost:51235/icon">
+
+    <script type="text/javascript">
+        AJS.$("#ide-icon1396485584").load(function () {
+            AJS.$(this).show();
+        });
+    </script>
+
+
+        </li>
+    </ul>
+    
+        <div class="toolbar-split toolbar-split-right"><span class="taskbar-pagination"><a class="pagination-first" title="Earliest Revisions">EarliestRevisions</a><a class="pagination-back" title="Earlier Revisions">EarlierRevisions</a><span class="pagination-text">&nbsp;</span><a class="pagination-next" title="Later Revisions">LaterRevisions</a><a class="pagination-last" title="Latest Revisions">LatestRevisions</a></span></div>
+    
+</div>
+
+                                                </div>
+                                            
+
+                                            
+                                                
+                                            
+
+                                            <div id="panel-target" class="aui-theadholder ">
+                                                
+<div id="constraint" class="">
+<div id="constraint-form">
+<form method="post" action="/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css" id="wb-constraint-form">
+<input type="hidden" name="wbbr" id="branchConstraint" value=""/>
+<input type="hidden" name="wbtag" id="tagConstraint" value=""/>
+<input type="hidden" name="wbjump" value="jump"/>
+
+<fieldset class="columns">
+<legend>Constraints</legend>
+<fieldset class="column column-auto">
+<legend>Constraints: committers</legend>
+<div>
+<label for="committerConstraint-input">Committer:</label>
+<div>
+
+<div class="fecru-autocomplete-wrapper">
+    <input id="committerConstraint-input" type="text" name="committerConstraint"
+           
+           class="text " value="">
+    <span class="fecru-autocomplete-dropdown-icon">&nbsp;</span>
+</div>
+<script type="text/javascript">
+    var eventType = "ready";
+    AJS.$(document).bind(eventType, function() {
+        var opts = {
+            
+            matchContains: true,
+            width: 350,
+            
+            extraParams: { "command": "committers" },
+            
+            
+            url: "/changelog-ajax/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css",
+            id: "committerConstraint-input",
+            inputId: "committerConstraint-input"
+        };
+        AJS.$("#committerConstraint-input").fecruAutocomplete(opts);
+
+        
+    });
+</script>
+
+</div>
+</div>
+<div>
+<label for="commentText">Log Comment:</label>
+<div>
+<input type="text" name="commentText" id="commentText"
+                                   value="">
+</div>
+</div>
+</fieldset>
+<fieldset class="column">
+<legend>Constraints: files</legend>
+<div>
+<label for="fileExtension" class="disabled">File Extension:</label>
+<div>
+<input type="text" name="fileExtension" id="fileExtension"
+                                   disabled="disabled"
+value="">
+</div>
+</div>
+<div>
+<label for="fileName" class="disabled">File Name:</label>
+<div>
+<input type="text" name="fileName" id="fileName"
+                                   disabled="disabled"
+value="">
+</div>
+</div>
+</fieldset>
+<fieldset class="column column-date">
+<legend>Constraints: dates</legend>
+<div class="row-date">
+<label for="startDate" class="calendar">Start Date:</label>
+<div>
+<input type="text" class="wbdate calendar-date calendar-date-start" id="startDate" name="startDate"
+                                   title="Date in format of yyyy-MM-dd or yyyy-MM-ddTHH:mm:ss" value="">
+<label for="startDate" class="calendar-date">Start Date:</label>
+</div>
+</div>
+<div class="row-date">
+<label for="endDate" class="calendar">End Date:</label>
+<div>
+<input type="text" class="wbdate calendar-date calendar-date-end" id="endDate" name="endDate"
+                                   title="Date in format of yyyy-MM-dd or yyyy-MM-ddTHH:mm:ss" value="">
+<label for="endDate" class="calendar-date">End Date:</label>
+</div>
+</div>
+</fieldset>
+</fieldset>
+<fieldset class="constraint-controls">
+
+<div class="aui-toolbar">
+<ul class="toolbar-group">
+<li class="toolbar-item">
+<input type="submit" id="constraint-apply" class="toolbar-trigger" value="Apply"/>
+</li>
+</ul>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+
+<script type="text/javascript">
+    AJS.toInit(function() {
+        AJS.$("#endDate").attr("autocomplete", "off");
+
+        var clearFilter = function () {
+            AJS.$("#constraint").slideUp();
+            AJS.$("#wb-constraint-form")
+                .find("input[type=text]")
+                    .val("")
+                .end()
+                .submit();
+        };
+
+        AJS.$("#constraint-apply").click(function() {
+            AJS.$(this).closest(".toolbar-item").addClass("active");
+            AJS.$("#wb-constraint-form").submit();
+        });
+
+        AJS.$("#constraint-clear").click(function() {
+            clearFilter();
+        });
+
+        // We can't tell the datePicker to constrain input by date format but _allow_ the letter 'T' (for time) so
+        // let's just do the input supression ourselves.
+        FECRU.UI.setupCalendar(false, false);
+        AJS.$("input.calendar-date-start, input.calendar-date-end")
+            .keypress(function (event) {
+                var allowedChars = "0123456789:T-";
+                var chr = String.fromCharCode(event.charCode == undefined ? event.keyCode : event.charCode);
+                return event.ctrlKey || (chr < ' ' || !allowedChars || allowedChars.indexOf(chr) > -1);
+        });
+
+        AJS.$("#wb-constraint-form").submit(function() {
+            // if there is an error in parsing the dates, don't submit the form
+            var datesOk = FECRU.UI.swapDatesIfReversed(function(dateString) {
+                    return dateString.substring(0, dateString.indexOf("T"));
+                }, AJS.$(this));
+
+            if (!datesOk) {
+                AJS.$("#constraint-apply").closest(".toolbar-item").removeClass("active");
+                return false;
+            }
+            return true;
+        });
+
+        AJS.$(".constraint-toggle").click(function() {
+            var $filterLi = AJS.$(this).parent();
+            if ($filterLi.hasClass("disabled")) {
+                return;
+            } else if ($filterLi.hasClass("filter-enabled")) {
+                clearFilter();
+            } else {
+                $filterLi.toggleClass("active");
+                AJS.$("#constraint").slideToggle();
+            }
+        });
+    });
+</script>
+
+
+<div class="revisions-count">
+3 revisions
+</div>
+
+<div id="history-revisions" class="data-loading">
+    
+</div>
+<script type="text/javascript">
+    var historyTableData = {
+        revisions : [ 
+            
+            {
+                id: "157239",
+                loaded: false,
+                revision: "b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503",
+                isHead: true,
+                checked: false ,
+                collapsed: true,
+                htmlContent: "\n\n\u003cspan class=\"revision-date\"\u003e\u003cspan title=\"02 June 2011 10:57\"\u003e02 Jun 11\u003c/span\u003e\u003c/span\u003e\n\u003cdiv class=\"revision-file\"\u003e\n\u003cdiv class=\"revision-details\"\u003e\n\u003cdiv class=\"revision-comitter\"\u003e\n\u003ca class=\"committer avatar userorcommitter\" style='background-image:url(/avatar/?s=32\n);padding-left:36px;padding-bottom:10.666666666666666px;padding-left: 0;' \n   href=\"/committer/newscoop/martin%20saturka\" title=\"\"\u003e\u003c/a\u003e\n\n\u003cul\u003e\n\u003cli\u003e\u003ca class=\"committer  userorcommitter\"  \n   href=\"/committer/newscoop/martin%20saturka\" title=\"\"\u003e\u003cspan class=\"linkText\"\u003eMartin Saturka\u003c/span\u003e\u003c/a\u003e\n\u003c/li\u003e\n\u003cli class=\"commit-branch\"\u003e\n\u003cspan\u003eb8bb4a28\u2026\u003c/span\u003e on\n\u003ca class=\"revision-branch\"\n                        \nhref=\"/changelog/~br=cs-2968-mapsplus/newscoop\"\n\u003e\ncs-2968-mapsplus\n\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-comitter --\u003e\n\u003cdiv class=\"revision-data\"\u003e\n\u003cul class=\"revision-meta\"\u003e\n\u003cli\u003e\u003ca title=\"View the changeset that this revision was made in\" href=\"/changelog/newscoop?cs=b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503\"\u003eChangeset\u003c/a\u003e\u003c/li\u003e\n\n\u003cli class=\"revision-diff\"\u003e\u003ca title=\"Diff this file to previous\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r2=b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503&r1=84ee9335e041ddf2c02781353588c5057bd15fee\"\u003eDiff\u003c/a\u003e\u003c/li\u003e\n\n\n\u003cli class=\"revision-annotation\"\u003e\u003ca title=\"View the file source at this revision\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r=b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503\"\u003eSource\u003c/a\u003e\u003c/li\u003e\n\n\n\n\u003cli\u003e\u003cem\u003eHEAD\u003c/em\u003e\u003c/li\u003e\n\n\u003c/ul\u003e\n\u003cul class=\"revision-loc\"\u003e\n\u003cli\u003e-1\u003c/li\u003e\n\u003cli\u003e+1\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003cdiv class=\"revision-board revision-terse\"\u003e\n\u003cspan class=\"revision-toggle\"\u003emore\u003c/span\u003e\n\u003cdiv class=\"revision-message\"\u003e\n\u003cp\u003eLoading...\u003c/p\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003c/div\u003e\u003c!-- /revision-file --\u003e\n\u003cinput type=\"checkbox\" id=\"revision-157239\" class=\"revision-check\" value=\"b8bb4a2894a0a81a4455ad057ddfbd76f7b7a503\" /\u003e\n\n"
+            }
+            ,
+            {
+                id: "156387",
+                loaded: false,
+                revision: "84ee9335e041ddf2c02781353588c5057bd15fee",
+                isHead: false,
+                checked: false ,
+                collapsed: true,
+                htmlContent: "\n\n\u003cspan class=\"revision-date\"\u003e\u003cspan title=\"26 May 2011 13:37\"\u003e26 May 11\u003c/span\u003e\u003c/span\u003e\n\u003cdiv class=\"revision-file\"\u003e\n\u003cdiv class=\"revision-details\"\u003e\n\u003cdiv class=\"revision-comitter\"\u003e\n\u003ca class=\"committer avatar userorcommitter\" style='background-image:url(/avatar/?s=32\n);padding-left:36px;padding-bottom:10.666666666666666px;padding-left: 0;' \n   href=\"/committer/newscoop/martin%20saturka\" title=\"\"\u003e\u003c/a\u003e\n\n\u003cul\u003e\n\u003cli\u003e\u003ca class=\"committer  userorcommitter\"  \n   href=\"/committer/newscoop/martin%20saturka\" title=\"\"\u003e\u003cspan class=\"linkText\"\u003eMartin Saturka\u003c/span\u003e\u003c/a\u003e\n\u003c/li\u003e\n\u003cli class=\"commit-branch\"\u003e\n\u003cspan\u003e84ee9335\u2026\u003c/span\u003e on\n\u003ca class=\"revision-branch\"\n                        \nhref=\"/changelog/~br=cs-2968-mapsplus/newscoop\"\n\u003e\ncs-2968-mapsplus\n\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-comitter --\u003e\n\u003cdiv class=\"revision-data\"\u003e\n\u003cul class=\"revision-meta\"\u003e\n\u003cli\u003e\u003ca title=\"View the changeset that this revision was made in\" href=\"/changelog/newscoop?cs=84ee9335e041ddf2c02781353588c5057bd15fee\"\u003eChangeset\u003c/a\u003e\u003c/li\u003e\n\n\u003cli class=\"revision-diff\"\u003e\u003ca title=\"Diff this file to previous\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r2=84ee9335e041ddf2c02781353588c5057bd15fee&r1=9ca3ac54d8e7e2dc65baabd39a642933661b9ec5\"\u003eDiff\u003c/a\u003e\u003c/li\u003e\n\n\n\u003cli class=\"revision-annotation\"\u003e\u003ca title=\"View the file source at this revision\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r=84ee9335e041ddf2c02781353588c5057bd15fee\"\u003eSource\u003c/a\u003e\u003c/li\u003e\n\n\n\n\u003c/ul\u003e\n\u003cul class=\"revision-loc\"\u003e\n\u003cli\u003e-1\u003c/li\u003e\n\u003cli\u003e+1\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003cdiv class=\"revision-board revision-terse\"\u003e\n\u003cspan class=\"revision-toggle\"\u003emore\u003c/span\u003e\n\u003cdiv class=\"revision-message\"\u003e\n\u003cp\u003eLoading...\u003c/p\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003c/div\u003e\u003c!-- /revision-file --\u003e\n\u003cinput type=\"checkbox\" id=\"revision-156387\" class=\"revision-check\" value=\"84ee9335e041ddf2c02781353588c5057bd15fee\" /\u003e\n\n"
+            }
+            ,
+            {
+                id: "102580",
+                loaded: false,
+                revision: "9ca3ac54d8e7e2dc65baabd39a642933661b9ec5",
+                isHead: true,
+                checked: false ,
+                collapsed: true,
+                htmlContent: "\n\n\u003cspan class=\"revision-date\"\u003e\u003cspan title=\"22 March 2011 15:02\"\u003e22 Mar 11\u003c/span\u003e\u003c/span\u003e\n\u003cdiv class=\"revision-file\"\u003e\n\u003cdiv class=\"revision-details\"\u003e\n\u003cdiv class=\"revision-comitter\"\u003e\n\u003ca class=\"committer avatar userorcommitter\" style='background-image:url(/avatar/?s=32\n);padding-left:36px;padding-bottom:10.666666666666666px;padding-left: 0;' \n   href=\"/committer/newscoop/mihai%20nistor\" title=\"\"\u003e\u003c/a\u003e\n\n\u003cul\u003e\n\u003cli\u003e\u003ca class=\"committer  userorcommitter\"  \n   href=\"/committer/newscoop/mihai%20nistor\" title=\"\"\u003e\u003cspan class=\"linkText\"\u003eMihai Nistor\u003c/span\u003e\u003c/a\u003e\n\u003c/li\u003e\n\u003cli class=\"commit-branch\"\u003e\n\u003cspan\u003e9ca3ac54\u2026\u003c/span\u003e on\n\u003ca class=\"revision-branch\"\n                        \nhref=\"/changelog/~br=master/newscoop\"\n\u003e\nmaster\n\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-comitter --\u003e\n\u003cdiv class=\"revision-data\"\u003e\n\u003cul class=\"revision-meta\"\u003e\n\u003cli\u003e\u003ca title=\"View the changeset that this revision was made in\" href=\"/changelog/newscoop?cs=9ca3ac54d8e7e2dc65baabd39a642933661b9ec5\"\u003eChangeset\u003c/a\u003e\u003c/li\u003e\n\n\u003cli class=\"revision-diff\"\u003e\u003ca title=\"Diff this file to previous\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r2=9ca3ac54d8e7e2dc65baabd39a642933661b9ec5&r1=729c56efe99ec36b4bdc5538ce4f750ed2bed15d\"\u003eDiff\u003c/a\u003e\u003c/li\u003e\n\n\n\u003cli class=\"revision-annotation\"\u003e\u003ca title=\"View the file source at this revision\" href=\"/browse/newscoop/newscoop/js/geocoding/openlayers/theme/default/style.css?r=9ca3ac54d8e7e2dc65baabd39a642933661b9ec5\"\u003eSource\u003c/a\u003e\u003c/li\u003e\n\n\n\n\u003cli\u003e\u003cem\u003eHEAD\u003c/em\u003e\u003c/li\u003e\n\n\u003c/ul\u003e\n\u003cul class=\"revision-loc\"\u003e\n\u003cli\u003e-0\u003c/li\u003e\n\u003cli\u003e+0\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003cdiv class=\"revision-board revision-terse\"\u003e\n\u003cspan class=\"revision-toggle\"\u003emore\u003c/span\u003e\n\u003cdiv class=\"revision-message\"\u003e\n\u003cp\u003eLoading...\u003c/p\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e\u003c!-- /revision-details --\u003e\n\u003c/div\u003e\u003c!-- /revision-file --\u003e\n\u003cinput type=\"checkbox\" id=\"revision-102580\" class=\"revision-check\" value=\"9ca3ac54d8e7e2dc65baabd39a642933661b9ec5\" /\u003e\n\n"
+            }
+            
+        ]
+    };
+</script>
+
+                                            </div>
+                                            
+                                                <div class="toolbar toolbar-bottom has-aui-toolbar">
+                                                    <div class="aui-toolbar">
+                                                        <div class="toolbar-split toolbar-split-right"><span class="taskbar-pagination"><a class="pagination-first" title="Earliest Revisions">EarliestRevisions</a><a class="pagination-back" title="Earlier Revisions">EarlierRevisions</a><span class="pagination-text">&nbsp;</span><a class="pagination-next" title="Later Revisions">LaterRevisions</a><a class="pagination-last" title="Latest Revisions">LatestRevisions</a></span></div>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div id="content-shield">&nbsp;</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+            <script type="text/javascript">
+AJS.$(document).ready(function () {
+
+FE.setupFileHistoryPage();
+});
+</script>
+        
+        
+<div id="footer">
+    <div class="fineprint">
+        Atlassian
+        
+            <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">FishEye
+                
+                    
+                        
+                        
+                        
+                        
+                            repository viewer
+                        
+                    
+                
+                
+            </a>
+        
+        
+            with
+        
+        
+            <a class="smalltext" href="http://www.atlassian.com/software/crucible/">Crucible code review</a>.
+        
+
+        
+
+        
+            (Version:2.5.6
+    
+            Build:20110524045956 2011-05-24)
+            
+        
+
+        
+             - 
+            <a class="smalltext" href="/admin/">Administration</a>
+            
+        
+
+        
+            
+             - 
+            Page generated 2012-07-03 07:19 +0000
+        
+
+    </div>
+
+    <div id="footer-bar">
+
+        
+
+
+
+
+
+
+    
+
+
+        
+
+        
+            
+                <div class="system-message">
+                    <div class="licensemessage">
+                        Crucible: Open Source License registered to Sourcefabric o.p.s..
+                        
+                    </div>
+                </div>
+            
+            
+        
+
+        
+            <div class="system-message">
+                <div class="licensemessage">
+                    <strong>
+                        <a class="smalltext" href="http://www.atlassian.com/software/fisheye/CrucibleDownloadCenter.jspa">
+                            Version 2.7.14 is available.</a>
+                        
+                    </strong>
+                </div>
+            </div>
+        
+
+    </div>
+
+</div>
+
+
+<div id="errorBox-container" style="display: none;">
+    <div id="errorBox">
+        <div id="errorDetails">
+            <div id="errorResponses"></div>
+
+            <div class="errorProductDetails">
+                You are running release
+                
+                CR2.5.6
+                
+                FE2.5.6
+                (20110524045956 2011-05-24),
+                please report your release number when reporting bugs.
+            </div>
+
+            <div class="errorAtlassianHelp">
+                <p>Got a suggestion or an issue?<br>
+                    Discuss it in <a href="http://forums.atlassian.com">our forums</a> or
+                    visit our <a href="http://support.atlassian.com">support website</a> for other options.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--
+page produced in 98 ms
+-->
+
+        <script type="text/javascript">
+            AJS.$(document).ready(function () {
+                FE.toggleTabs();
+                FE.setupPanes();
+            });
+        </script>
+
+        
+        
+
+
+
+
+
+  
+    </body>
+</html>
+
+
