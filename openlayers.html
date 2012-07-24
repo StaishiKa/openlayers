@@ -5,12 +5,13 @@
     <meta http-equiv='imagetoolbar' content='no'/>
     <style type="text/css"> 
 		v\:* {behavior:url(#default#VML);}
-		html, body { overflow: hidden; padding: 0; height: 100%; width: 100%; font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; }
-		body { margin: 10px; background: #fff; }
+		html, body { overflow: hidden;  height: 100%;  font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; }
+		body { margin: 5px; background: #fff; }
 		h1 { margin: 0; padding: 6px; border:0; font-size: 20pt; }
 		#header { height: 43px; padding: 0; background-color: #eee; border: 1px solid #888; }
 		#subheader { height: 12px; text-align: right; font-size: 10px; color: #555;}
 		#map { height: 95%; border: 1px solid #888; }
+		 
     </style>
 	<script src="lib/OpenLayers.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -24,56 +25,59 @@
 		OpenLayers.IMAGE_RELOAD_ATTEMPTS = 3; // How many times should we try to reload an image before giving up? 
 		
 		OpenLayers.Util.extend(
+			//Features are combinations of geography and attributes.  The OpenLayers.Feature class specifically combines a marker and a lonlat.
 			OpenLayers.Feature.Vector.style.default,
 			{
 				label: "${title}",
-				fontSize: '15',
-				fontFamily: 'arial',
-				pointRadius: 3
+				fontSize: '11',
+				fontFamily: 'arial',				
+				pointRadius: 10
+				
 			}
 		);
 
 		OpenLayers.Util.extend(
 			OpenLayers.Feature.Vector.style.select,
 			{
-				pointRadius: 3,
+				pointRadius: 10,
 				label: "${title}",
 				fontSize: '15',
 				fontFamily: 'arial',
 				
 			}
 		);
-			
-		
-		function onselect(evt) {
-		alert(evt.feature.attributes.title);
-		   window.open(evt.feature.attributes.url);
-		}
-		
+									
 		function init(){
-	        var options = {
-	            controls: [],
-		        maxExtent: new OpenLayers.Bounds(  0.0, -4096.0, 4096.0, 0.0 ),
-		        maxResolution: 16.000000,
-		        numZoomLevels: 5
+		
+			//задаём опции
+			var options = {
+				controls: // добавляем контролы
+				[
+					new OpenLayers.Control.Navigation(), // Элемент управления позволяющий взаимодействоват с катрой с помощью мышки(увеличение, уменьшение)
+					new OpenLayers.Control.PanZoomBar(), // Элемент управления PanZoomBar добавляет на карту компас и шкалу зума
+					new OpenLayers.Control.ArgParser(),
+					new OpenLayers.Control.Attribution()
+				],
+				 maxExtent: new OpenLayers.Bounds(  0.0, -4096.0, 4096.0, 0.0 ), // границы
+				 maxResolution: 16.000000, // разрешение 
+				 numZoomLevels: 5 //кол-во уровней
 				//eventListeners: { "zoomend": mapEvent}
-		    };
-	        map = new OpenLayers.Map('map', options);
+			 };
+			 
+			map = new OpenLayers.Map('map', options); // объект, который будет отвечать за отображение карты(в конструкторе объекта map используется два аргумента - id html элемента, связанного с картой и опции)
 	
-		    var layer = new OpenLayers.Layer.TMS( "TMS Layer","",
-		        {  url: '', serviceVersion: '.', layername: '.', alpha: true,
+			//создаём и добавляем слои на карту
+			var layer = new OpenLayers.Layer.TMS( "TMS Layer","",  //слой для достуа к слоям(тайлам)
+				{  url: '', serviceVersion: '.', layername: '.', alpha: true,
 					type: 'png', getURL: overlay_getTileURL 
-				});
-		    map.addLayer(layer);
+				 });
+				 
+			map.addLayer(layer);
 			
 		
-	        map.addControl(new OpenLayers.Control.PanZoomBar());
-	        map.addControl(new OpenLayers.Control.MousePosition());
-	        map.addControl(new OpenLayers.Control.MouseDefaults());
-	        map.addControl(new OpenLayers.Control.KeyboardDefaults());
-			
-			var geojson = new OpenLayers.Format.GeoJSON(),
-			geojsonData =  {
+			// GeoJSON - формат обмена пространственными данными. Объект GeoJSON может быть представлен геометрией (geometry), объектом (feature) или коллекцией объектов (feature collection). Объект (feature) в GeoJSON состоит из геометрии и дополнительных свойств, коллекция объектов (feature collection) – из набора объектов (feature).
+			var geojson = new OpenLayers.Format.GeoJSON(); // A parser to read/write GeoJSON safely
+			/* geojsonData =  {
 				"type": "FeatureCollection",
 																								
 				"features": [
@@ -85,7 +89,40 @@
 				,
 				{ "type": "Feature", "id": -8, "properties": { "id": 3, "title": "GIS-LAB", "url": "http://gis-lab.info" }, 
 					"geometry": { "type": "Point", "coordinates": [ 1790.6162162162159, -2083.9783783783782 ] } }]
-				};
+				}; */
+			// в этом случае объект GeoJSON	представлен коллекцией объектов (feature collection)
+			geojsonData = {
+				"type": "FeatureCollection",
+																									
+				"features": [
+					{ "type": "Feature", "id": -4, "properties": { "id": 1, "title": "laptops", "url": "someurl" }, "geometry": { "type": "Point", "coordinates": [ 487.09189163455665, -808.12972952532346 ] } }
+					,
+					{ "type": "Feature", "id": -5, "properties": { "id": 2, "title": "tablets", "url": "someurl2" }, "geometry": { "type": "Point", "coordinates": [ 642.07567544389144, -963.11351333465791 ] } }
+					,
+					{ "type": "Feature", "id": -6, "properties": { "id": 3, "title": "netbooks", "url": "someurl3" }, "geometry": { "type": "Point", "coordinates": [ 797.05945925322612, -1123.6324322800406 ] } }
+					,
+					{ "type": "Feature", "id": -7, "properties": { "id": 4, "title": "clothing", "url": "someurl4" }, "geometry": { "type": "Point", "coordinates": [ 3293.4054056107243, -924.36756738232452 ] } }
+					,
+					{ "type": "Feature", "id": -8, "properties": { "id": 5, "title": "shoes", "url": "someurl5" }, "geometry": { "type": "Point", "coordinates": [ 3442.8540542840115, -1046.1405403753733 ] } }
+					,
+					{ "type": "Feature", "id": -9, "properties": { "id": 6, "title": "watches", "url": "someurl6" }, "geometry": { "type": "Point", "coordinates": [ 3520.3459461886787, -1206.6594593207556 ] } }
+					,
+					{ "type": "Feature", "id": -10, "properties": { "id": 7, "title": "software", "url": "someurl7" }, "geometry": { "type": "Point", "coordinates": [ 608.86486462760536, -664.21621598808406 ] } }
+					,
+					{ "type": "Feature", "id": -11, "properties": { "id": 8, "title": "cell phones", "url": "someurl8" }, "geometry": { "type": "Point", "coordinates": [ 1776.7783783336633, -2003.7189189116198 ] } }
+					,
+					{ "type": "Feature", "id": -12, "properties": { "id": 9, "title": "mp3 players", "url": "someurl9" }, "geometry": { "type": "Point", "coordinates": [ 2125.4918919046663, -2114.4216216325731 ] } }
+					,
+					{ "type": "Feature", "id": -13, "properties": { "id": 10, "title": "appliances", "url": "appliances10" }, "geometry": { "type": "Point", "coordinates": [ 2053.5351351360468, -1931.7621621429998 ] } }
+					,
+					{ "type": "Feature", "id": -14, "properties": { "id": 11, "title": "beauty", "url": "appliances11" }, "geometry": { "type": "Point", "coordinates": [ 697.4270268043681, -2856.1297298629606 ] } }
+					,
+					{ "type": "Feature", "id": -15, "properties": { "id": 12, "title": "natural & organic", "url": "someurl12" }, "geometry": { "type": "Point", "coordinates": [ 631.00540517179604, -2739.8918920059596 ] } }
+					,
+					{ "type": "Feature", "id": -16, "properties": { "id": 13, "title": "health", "url": "someurl13" }, "geometry": { "type": "Point", "coordinates": [ 470.48648622641372, -3005.5783785362473 ] } }
+
+					]
+					};
 			
 			vector = new OpenLayers.Layer.Vector();
 			map.addLayer(vector);
@@ -93,13 +130,17 @@
 
 			select = new OpenLayers.Control.SelectFeature(vector, {autoActivate: true});
 			map.addControl(select);
-			
+		
 			vector.events.register("featureselected", null, onselect);
-			select.activate();
 			
-			map.zoomToExtent( mapBounds );	//увеличить по границам
+			map.zoomToExtent( mapBounds );	//Приблизить к указанным границам, центрировать
 	    }
 			
+		function onselect(evt) {
+		   //alert(evt.feature.attributes.title);
+		   window.open(evt.feature.attributes.url);
+		}
+		
 		function mapEvent(event) {
 			//if(event.type == "zoomend") {
 			if(event.object.zoom == 1) {
